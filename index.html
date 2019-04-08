@@ -817,7 +817,7 @@
                 
                   <span class="post-meta-item-text">Bearbeitet am</span>
                 
-                <time title="Geändert am: 2019-04-08 14:30:18" itemprop="dateModified" datetime="2019-04-08T14:30:18+08:00">2019-04-08</time>
+                <time title="Geändert am: 2019-04-08 14:38:43" itemprop="dateModified" datetime="2019-04-08T14:38:43+08:00">2019-04-08</time>
               
             
           </span>
@@ -897,7 +897,7 @@
 <p>堆排序：建堆和堆化（堆是完全二叉树+根节点大于或者小于左右结点）数组存储建堆。</p>
 <p><strong>建堆</strong>：以数组保存堆，根小标为i，左右子树为2*i+1和2i+2.。建堆思路：</p>
 <p>从下到上建堆，找到n/2的地方，判断其左右节点，大于它则交换，依次递归建堆。过程如下所示：</p>
-<p><img src="I:\myBlog\blog\source\_posts\1554444517470.png" alt="1554444517470"></p>
+<p><img src="/2019/04/05/数据结构与算法/I:/myBlog\blog\source\_posts\数据结构与算法\1554444517470.png" alt="1554444517470"></p>
 <p>private static void buildHeap(int[] a, int n) {<br>  for (int i = n/2; i &gt;= 1; –i) {<br>    heapify(a, n, i);<br>  }<br>}</p>
 <p>private static void heapify(int[] a, int n, int i) {<br>  while (true) {<br>    int maxPos = i;<br>    if (i<em>2 &lt;= n &amp;&amp; a[i] &lt; a[i</em>2]) maxPos = i<em>2;<br>    if (i</em>2+1 &lt;= n &amp;&amp; a[maxPos] &lt; a[i<em>2+1]) maxPos = i</em>2+1;<br>    if (maxPos == i) break;<br>    swap(a, i, maxPos);<br>    i = maxPos;<br>  }<br>}</p>
 <p>排序：取出最小（大）的数，其余的数进行堆化。</p>
@@ -944,8 +944,8 @@
 <h1 id="常见面试笔试题目"><a href="#常见面试笔试题目" class="headerlink" title="常见面试笔试题目"></a>常见面试笔试题目</h1><p>1、求平方根：</p>
 <p>(1)暴力求解，二分，牛顿迭代法（注意数值越界问题）：</p>
 <p>牛顿迭代公式如下，如果有函数f（x）=0，那么有如下递推公式：</p>
-<p><img src="C:\Users\Pan.Yanqi\AppData\Roaming\Typora\typora-user-images\1554442724770.png" alt="1554442724770"></p>
-<p><img src="C:\Users\Pan.Yanqi\AppData\Roaming\Typora\typora-user-images\1554443248625.png" alt="1554443248625"></p>
+<p><img src="/2019/04/05/数据结构与算法/C:/Users\Pan.Yanqi\AppData\Roaming\Typora\typora-user-images\1554442724770.png" alt="1554442724770"></p>
+<p><img src="/2019/04/05/数据结构与算法/C:/Users\Pan.Yanqi\AppData\Roaming\Typora\typora-user-images\1554443248625.png" alt="1554443248625"></p>
 <p>链表：链表反转，回文链表，链表相交，有环无环链表</p>
 <p>栈队列：最小栈，栈实现队列，队列实现栈</p>
 <p>字符串：BF,KMP匹配</p>
