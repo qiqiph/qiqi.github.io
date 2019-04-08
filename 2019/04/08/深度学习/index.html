@@ -96,17 +96,17 @@
 
 
 
-  <meta name="description" content="搭建hexo参考教程：https://zhuanlan.zhihu.com/p/26625249markdown和其编辑器typora使用参考：markdown使用：https://sspai.com/post/25137">
+  <meta name="description" content="问题： 1、dropout的缺点是成本函数无法被明确定义？使用dropout时，先确认成本函数单调递减，在打开dropout?? 2、relu是线性的，其能够拟合问题吗？？ 3、梯度消失与梯度爆炸：根本原因都是反向传播过程中梯度更新的问题。 比如使用sigmodi函数是，最大梯度为1/4，如果w&amp;lt;1,那么导数*w&amp;lt;1/4,根据链式求导法则，前面的层比后面的层更新慢，导致梯度消失。 梯度">
 <meta property="og:type" content="article">
-<meta property="og:title" content="hexo搭建">
-<meta property="og:url" content="http://yoursite.com/2019/04/04/hexo搭建/index.html">
+<meta property="og:title" content="深度学习">
+<meta property="og:url" content="http://yoursite.com/2019/04/08/深度学习/index.html">
 <meta property="og:site_name" content="PanYanqi&#39;s Blog">
-<meta property="og:description" content="搭建hexo参考教程：https://zhuanlan.zhihu.com/p/26625249markdown和其编辑器typora使用参考：markdown使用：https://sspai.com/post/25137">
+<meta property="og:description" content="问题： 1、dropout的缺点是成本函数无法被明确定义？使用dropout时，先确认成本函数单调递减，在打开dropout?? 2、relu是线性的，其能够拟合问题吗？？ 3、梯度消失与梯度爆炸：根本原因都是反向传播过程中梯度更新的问题。 比如使用sigmodi函数是，最大梯度为1/4，如果w&amp;lt;1,那么导数*w&amp;lt;1/4,根据链式求导法则，前面的层比后面的层更新慢，导致梯度消失。 梯度">
 <meta property="og:locale" content="Chinese">
-<meta property="og:updated_time" content="2019-04-04T15:28:37.628Z">
+<meta property="og:updated_time" content="2019-04-08T02:34:19.172Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="hexo搭建">
-<meta name="twitter:description" content="搭建hexo参考教程：https://zhuanlan.zhihu.com/p/26625249markdown和其编辑器typora使用参考：markdown使用：https://sspai.com/post/25137">
+<meta name="twitter:title" content="深度学习">
+<meta name="twitter:description" content="问题： 1、dropout的缺点是成本函数无法被明确定义？使用dropout时，先确认成本函数单调递减，在打开dropout?? 2、relu是线性的，其能够拟合问题吗？？ 3、梯度消失与梯度爆炸：根本原因都是反向传播过程中梯度更新的问题。 比如使用sigmodi函数是，最大梯度为1/4，如果w&amp;lt;1,那么导数*w&amp;lt;1/4,根据链式求导法则，前面的层比后面的层更新慢，导致梯度消失。 梯度">
 
 
 
@@ -114,7 +114,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/2019/04/04/hexo搭建/">
+  <link rel="canonical" href="http://yoursite.com/2019/04/08/深度学习/">
 
 
 
@@ -124,7 +124,7 @@
   };
 </script>
 
-  <title>hexo搭建 | PanYanqi's Blog</title>
+  <title>深度学习 | PanYanqi's Blog</title>
   
 
 
@@ -289,7 +289,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/04/hexo搭建/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/08/深度学习/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="PanYanqi">
@@ -306,7 +306,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">hexo搭建
+          <h1 class="post-title" itemprop="name headline">深度学习
 
               
             
@@ -332,7 +332,7 @@
                 
               
 
-              <time title="Erstellt: 2019-04-04 23:10:42 / Geändert am: 23:28:37" itemprop="dateCreated datePublished" datetime="2019-04-04T23:10:42+08:00">2019-04-04</time>
+              <time title="Erstellt: 2019-04-08 09:31:22 / Geändert am: 10:34:19" itemprop="dateCreated datePublished" datetime="2019-04-08T09:31:22+08:00">2019-04-08</time>
             
 
             
@@ -371,7 +371,17 @@
       
 
       
-        <p>搭建hexo参考教程：<a href="https://zhuanlan.zhihu.com/p/26625249" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/26625249</a><br>markdown和其编辑器typora使用参考：<br>markdown使用：<a href="https://sspai.com/post/25137" target="_blank" rel="noopener">https://sspai.com/post/25137</a></p>
+        <p>问题：</p>
+<p>1、dropout的缺点是成本函数无法被明确定义？使用dropout时，先确认成本函数单调递减，在打开dropout??</p>
+<p>2、relu是线性的，其能够拟合问题吗？？</p>
+<p>3、梯度消失与梯度爆炸：根本原因都是反向传播过程中梯度更新的问题。</p>
+<p>比如使用sigmodi函数是，最大梯度为1/4，如果w&lt;1,那么导数*w&lt;1/4,根据链式求导法则，前面的层比后面的层更新慢，导致梯度消失。</p>
+<p>梯度爆炸：w&gt;4时，梯度以指数形式增长，导致梯度爆炸</p>
+<p>出现loss=nan的原因:直观上就是loss值太大，数字越界了：原因可能有：</p>
+<p>1、梯度爆炸：学习率设置等原因导致一开始的时候w就偏大</p>
+<p>2、损失函数错误</p>
+<p>3、输入错误：pooling层的步长大于核的尺寸</p>
+<p>分类任务的输出层要用sigmoid函数：因为其输出是0-1之间</p>
 
       
     </div>
@@ -402,15 +412,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2019/04/08/计算机网络/" rel="next" title="计算机网络与操作系统">
+                <i class="fa fa-chevron-left"></i> 计算机网络与操作系统
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/04/04/c++基本语法/" rel="prev" title>
-                 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>

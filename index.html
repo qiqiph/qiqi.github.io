@@ -286,6 +286,475 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/08/深度学习/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="PanYanqi">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="PanYanqi's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/04/08/深度学习/" class="post-title-link" itemprop="url">深度学习</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+
+              
+                
+              
+
+              <time title="Erstellt: 2019-04-08 09:31:22 / Geändert am: 10:34:19" itemprop="dateCreated datePublished" datetime="2019-04-08T09:31:22+08:00">2019-04-08</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>问题：</p>
+<p>1、dropout的缺点是成本函数无法被明确定义？使用dropout时，先确认成本函数单调递减，在打开dropout??</p>
+<p>2、relu是线性的，其能够拟合问题吗？？</p>
+<p>3、梯度消失与梯度爆炸：根本原因都是反向传播过程中梯度更新的问题。</p>
+<p>比如使用sigmodi函数是，最大梯度为1/4，如果w&lt;1,那么导数*w&lt;1/4,根据链式求导法则，前面的层比后面的层更新慢，导致梯度消失。</p>
+<p>梯度爆炸：w&gt;4时，梯度以指数形式增长，导致梯度爆炸</p>
+<p>出现loss=nan的原因:直观上就是loss值太大，数字越界了：原因可能有：</p>
+<p>1、梯度爆炸：学习率设置等原因导致一开始的时候w就偏大</p>
+<p>2、损失函数错误</p>
+<p>3、输入错误：pooling层的步长大于核的尺寸</p>
+<p>分类任务的输出层要用sigmoid函数：因为其输出是0-1之间</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/08/计算机网络/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="PanYanqi">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="PanYanqi's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/04/08/计算机网络/" class="post-title-link" itemprop="url">计算机网络与操作系统</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+
+              
+                
+              
+
+              <time title="Erstellt: 2019-04-08 08:23:06 / Geändert am: 09:14:57" itemprop="dateCreated datePublished" datetime="2019-04-08T08:23:06+08:00">2019-04-08</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>书籍《计算机网络自顶向下》TCP/IP卷一，协议森林</p>
+<p>《以下内容可以在学习资料总结中找到相关的》</p>
+<p>数据链路层：ARP地址解析，循环冗余检测</p>
+<p>网络层：子网划分和子网掩码，CIDR、ICMP网际控制协议，DCHP协议工作流程等</p>
+<p>传输层：TCP与UDP的区别以及应用范围，TCP三次握手和四次握手，TIME_WAIT原因，TCP可靠传输（累计确认，超时重传，选择重传，滑动窗口，拥塞控制，慢开始，拥塞避免，快重传，快恢复），TCP/UDP头部</p>
+<p>应用层:http报文格式，GET/POST区别，http和https区别，DNS域名解析流程</p>
+<p>操作系统：</p>
+<p>进程管理：线程、进程、进程通信和进程同步、调度算法，死锁等</p>
+<p>内存管理：逻辑地址空间和物理地址空间，内存分配管理方式，虚拟内存管理等</p>
+<p>Linux:linux常用命令，shell,gdb端点调试</p>
+<p>数据库：SQL语句，事务，索引，视图和锁</p>
+<p>逻辑推理：兵乓球称重，老鼠喝水，海带分金币，城市有多是出租车，多少理发店</p>
+<p>海量数据处理：Top N问题，公共数据问题，内存Top N问题</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/05/计算机基本知识/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="PanYanqi">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="PanYanqi's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/04/05/计算机基本知识/" class="post-title-link" itemprop="url">Unbenannt</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+
+              
+                
+              
+
+              <time title="Erstellt: 2019-04-05 23:04:31" itemprop="dateCreated datePublished" datetime="2019-04-05T23:04:31+08:00">2019-04-05</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Bearbeitet am</span>
+                
+                <time title="Geändert am: 2019-04-06 22:56:30" itemprop="dateModified" datetime="2019-04-06T22:56:30+08:00">2019-04-06</time>
+              
+            
+          </span>
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="计算机基本知识"><a href="#计算机基本知识" class="headerlink" title="计算机基本知识"></a>计算机基本知识</h1><h2 id="进制转换："><a href="#进制转换：" class="headerlink" title="进制转换："></a>进制转换：</h2><p>从n进制到示进制，逢n进1，那么进制转换直接为数*n的位数次方即可，仿照2进制，八进制用0-8表示，16进制用0-9 ABCDEF表示。</p>
+<p>从十进制到n进制，除以n取余，依次递推即可。</p>
+<p>二进制到八进制：逢三合一</p>
+<p>八进制到二进制：1变3</p>
+<p>二进制到16进制：逢四合一</p>
+<p>三角函数常见公式</p>
+<p><a href="https://blog.csdn.net/a396901990/article/details/43998935" target="_blank" rel="noopener">https://blog.csdn.net/a396901990/article/details/43998935</a></p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/05/数据结构与算法/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -331,12 +800,24 @@
                 
               
 
-              <time title="Erstellt: 2019-04-05 10:28:10 / Geändert am: 16:47:03" itemprop="dateCreated datePublished" datetime="2019-04-05T10:28:10+08:00">2019-04-05</time>
+              <time title="Erstellt: 2019-04-05 10:28:10" itemprop="dateCreated datePublished" datetime="2019-04-05T10:28:10+08:00">2019-04-05</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Bearbeitet am</span>
+                
+                <time title="Geändert am: 2019-04-08 14:25:11" itemprop="dateModified" datetime="2019-04-08T14:25:11+08:00">2019-04-08</time>
               
             
           </span>
@@ -372,7 +853,41 @@
       
         
           
-            <h1 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h1><h1 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h1><h2 id="排序算法"><a href="#排序算法" class="headerlink" title="排序算法"></a>排序算法</h2><p>冒泡排序，插入排序，选择排序，希尔排序，归并，快排，堆排序，计数排序，桶排序</p>
+            <h1 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h1><h2 id="二叉树"><a href="#二叉树" class="headerlink" title="二叉树"></a>二叉树</h2><h3 id="二叉树的遍历："><a href="#二叉树的遍历：" class="headerlink" title="二叉树的遍历："></a>二叉树的遍历：</h3><p>前中后序，层次（广度优先）<a href="https://blog.csdn.net/u013468917/article/details/69556547" target="_blank" rel="noopener">https://blog.csdn.net/u013468917/article/details/69556547</a></p>
+<p>前中后序：递归遍历简单：比如前序——输出根节点值，递归输出左节点，递归输出右节点即可。</p>
+<p>非递归实现：</p>
+<p><strong>前序</strong>：</p>
+<p>p=root</p>
+<p>while(p||stack非空)</p>
+<p>​     if(p):</p>
+<p>​         输出p.val；栈放入p;p=p的left</p>
+<p>​    else:</p>
+<p>​      弹出栈顶p，p=p的right</p>
+<p><strong>中序</strong>：跟前序类似</p>
+<p>p=root</p>
+<p>while(p||stack非空)：</p>
+<p>​    if(p):</p>
+<p>​        p入栈；p=p的left</p>
+<p>​    else:</p>
+<p>​        弹出栈顶p,输出p-&gt;val;p=p的right</p>
+<p><strong>后序非递归</strong>比较复杂：保证根节点的左右节点不存在或者已经被访问了才能访问</p>
+<p>p=root；pre=null</p>
+<p>p入栈</p>
+<p>while(栈非空)：</p>
+<p>​    取出（但不弹出）栈顶p;</p>
+<p>​    if(p.left==null并且p.right==null或者（pre!=null并且（pre==p.left||pre==p.right））)</p>
+<p>​        输出p.val；弹出栈顶元素；pre=p；</p>
+<p>​    else:</p>
+<p>​        <strong>p.right非空，入栈；</strong></p>
+<p>​        <strong>p.left非空，入栈</strong></p>
+<p><strong>层次遍历</strong>：广度优先搜索思路，用队列实现</p>
+<p>p==null,return</p>
+<p>p压入队列</p>
+<p>while(队列不为空)：</p>
+<p>​    取出队头p；输出p.val</p>
+<p>​       p.left不为空，压入；</p>
+<p>​    p.right不为空，压入</p>
+<h1 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h1><h2 id="排序算法"><a href="#排序算法" class="headerlink" title="排序算法"></a>排序算法</h2><p>冒泡排序，插入排序，选择排序，希尔排序，归并，快排，堆排序，计数排序，桶排序</p>
 <p>冒泡：从起始点开始，一个个往后比较大小，把大的值往后交换。优化：标志位flag表示当前一次冒泡是否有交换，没有则退出循环</p>
 <p>插入排序：将数据分为已排空间和未排空间，不断将未排空间的数据插入到已排空间的合理位置</p>
 <p>选择排序：也分为已排和未排，但是每次都是选择最小的加入到已排空间。</p>
@@ -382,7 +897,7 @@
 <p>堆排序：建堆和堆化（堆是完全二叉树+根节点大于或者小于左右结点）数组存储建堆。</p>
 <p><strong>建堆</strong>：以数组保存堆，根小标为i，左右子树为2*i+1和2i+2.。建堆思路：</p>
 <p>从下到上建堆，找到n/2的地方，判断其左右节点，大于它则交换，依次递归建堆。过程如下所示：</p>
-<p><img src="C:\Users\Pan.Yanqi\AppData\Roaming\Typora\typora-user-images\1554444517470.png" alt="1554444517470"></p>
+<p><img src="I:\myBlog\blog\source\_posts\1554444517470.png" alt="1554444517470"></p>
 <p>private static void buildHeap(int[] a, int n) {<br>  for (int i = n/2; i &gt;= 1; –i) {<br>    heapify(a, n, i);<br>  }<br>}</p>
 <p>private static void heapify(int[] a, int n, int i) {<br>  while (true) {<br>    int maxPos = i;<br>    if (i<em>2 &lt;= n &amp;&amp; a[i] &lt; a[i</em>2]) maxPos = i<em>2;<br>    if (i</em>2+1 &lt;= n &amp;&amp; a[maxPos] &lt; a[i<em>2+1]) maxPos = i</em>2+1;<br>    if (maxPos == i) break;<br>    swap(a, i, maxPos);<br>    i = maxPos;<br>  }<br>}</p>
 <p>排序：取出最小（大）的数，其余的数进行堆化。</p>
@@ -415,22 +930,29 @@
 <p>（4）<strong>KMP算法</strong></p>
 <h2 id="深度优先和广度优先"><a href="#深度优先和广度优先" class="headerlink" title="深度优先和广度优先"></a>深度优先和广度优先</h2><h2 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h2><h2 id="回溯"><a href="#回溯" class="headerlink" title="回溯"></a>回溯</h2><h2 id="分治"><a href="#分治" class="headerlink" title="分治"></a>分治</h2><h2 id="贪心"><a href="#贪心" class="headerlink" title="贪心"></a>贪心</h2><p>思想：每次都需选取最优的点，加入到步骤中，但是注意贪心并不能总是找到最优解法。</p>
 <p>应用：霍夫曼编码，单源最短路径</p>
-<p>解决问题步骤：</p>
+<p><strong>解决问题步骤：</strong></p>
 <p>1、针对一组数据，定义限制和期望，从中选取几个数据，满足限制，期望对打，考虑使用贪心。</p>
 <p>2、尝试 是否能用贪心：选择的当前情况对限制值同等贡献，对期望值贡献最大</p>
 <p>3、举例证明是否贪心可以得到最优解</p>
-<h2 id="动态规划"><a href="#动态规划" class="headerlink" title="动态规划"></a>动态规划</h2><p>递归+记忆。</p>
+<h2 id="动态规划"><a href="#动态规划" class="headerlink" title="动态规划"></a>动态规划</h2><p>递归+记忆。<strong>最优子结构和重叠的子问题</strong></p>
 <p>对于一组数据，从后选择在限制条件下构成最优解。选她，不选他两种情况下面的最优解。向前分解为子问题。</p>
 <p>动态规划关键信息：重叠子问题，选和不选两种情况，递归出口。将递归转为记忆。</p>
-<p>动态规划解题关键：</p>
+<p>动态规划解题关键：问题可以划分为子问题的解</p>
 <p>1、找到递推关系</p>
 <p>2、找到出口信息</p>
 <p>3、将递归转为循环：找到合适的数组保存中间overlap的内容，在数组中要表示初始化的出口</p>
 <h1 id="常见面试笔试题目"><a href="#常见面试笔试题目" class="headerlink" title="常见面试笔试题目"></a>常见面试笔试题目</h1><p>1、求平方根：</p>
-<p>(1)暴力求解，二分，牛顿迭代法（注意越界问题）：</p>
+<p>(1)暴力求解，二分，牛顿迭代法（注意数值越界问题）：</p>
 <p>牛顿迭代公式如下，如果有函数f（x）=0，那么有如下递推公式：</p>
 <p><img src="C:\Users\Pan.Yanqi\AppData\Roaming\Typora\typora-user-images\1554442724770.png" alt="1554442724770"></p>
 <p><img src="C:\Users\Pan.Yanqi\AppData\Roaming\Typora\typora-user-images\1554443248625.png" alt="1554443248625"></p>
+<p>链表：链表反转，回文链表，链表相交，有环无环链表</p>
+<p>栈队列：最小栈，栈实现队列，队列实现栈</p>
+<p>字符串：BF,KMP匹配</p>
+<p>树：二叉树性质，递归与非递归遍历，层次遍历，二叉树构造，二叉树深度，二叉树路径，镜像二叉树，搜索二叉树，平衡二叉树，并查集，B树，B+树</p>
+<p>图：广度优先，深度优先查找，生成树和最小生成树，最短路径，拓扑排序等</p>
+<p>查找：线性表查找，树表查找，哈希表查找</p>
+<p>排序:八大排序算法，高频：归并，堆排，快排</p>
 
           
         
@@ -812,12 +1334,24 @@
                 
               
 
-              <time title="Erstellt: 2019-04-04 23:26:55 / Geändert am: 23:30:24" itemprop="dateCreated datePublished" datetime="2019-04-04T23:26:55+08:00">2019-04-04</time>
+              <time title="Erstellt: 2019-04-04 23:26:55" itemprop="dateCreated datePublished" datetime="2019-04-04T23:26:55+08:00">2019-04-04</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Bearbeitet am</span>
+                
+                <time title="Geändert am: 2019-04-05 23:11:22" itemprop="dateModified" datetime="2019-04-05T23:11:22+08:00">2019-04-05</time>
               
             
           </span>
@@ -1079,7 +1613,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-count">8</span>
                     <span class="site-state-item-name">Artikel</span>
                   </a>
                 </div>
