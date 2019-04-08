@@ -331,7 +331,7 @@
                 
               
 
-              <time title="Erstellt: 2019-04-08 14:55:39 / Geändert am: 14:56:03" itemprop="dateCreated datePublished" datetime="2019-04-08T14:55:39+08:00">2019-04-08</time>
+              <time title="Erstellt: 2019-04-08 14:55:39 / Geändert am: 14:59:56" itemprop="dateCreated datePublished" datetime="2019-04-08T14:55:39+08:00">2019-04-08</time>
             
 
             
@@ -372,7 +372,8 @@
       
         
           
-            <p><img src="/2019/04/08/深度学习1/I:/myBlog\blog\source\_posts\深度学习1\1554444517470.png" alt="1554444517470"></p>
+            <p><img src="/2019/04/08/深度学习1/myBlog\blog\source\_posts\深度学习1\1554444517470.png" alt></p>
+<p>test</p>
 
           
         
@@ -555,7 +556,7 @@
 <p>堆排序：建堆和堆化（堆是完全二叉树+根节点大于或者小于左右结点）数组存储建堆。</p>
 <p><strong>建堆</strong>：以数组保存堆，根小标为i，左右子树为2*i+1和2i+2.。建堆思路：</p>
 <p>从下到上建堆，找到n/2的地方，判断其左右节点，大于它则交换，依次递归建堆。过程如下所示：</p>
-<p><img src="/2019/04/08/数据结构与算法/I:/myBlog\blog\source\_posts\数据结构与算法\1554444517470.png" alt="1554444517470"></p>
+<p><img src="/2019/04/08/数据结构与算法/myBlog\blog\source\_posts\数据结构与算法\1554444517470.png" alt="1554444517470"></p>
 <p>private static void buildHeap(int[] a, int n) {<br>  for (int i = n/2; i &gt;= 1; –i) {<br>    heapify(a, n, i);<br>  }<br>}</p>
 <p>private static void heapify(int[] a, int n, int i) {<br>  while (true) {<br>    int maxPos = i;<br>    if (i<em>2 &lt;= n &amp;&amp; a[i] &lt; a[i</em>2]) maxPos = i<em>2;<br>    if (i</em>2+1 &lt;= n &amp;&amp; a[maxPos] &lt; a[i<em>2+1]) maxPos = i</em>2+1;<br>    if (maxPos == i) break;<br>    swap(a, i, maxPos);<br>    i = maxPos;<br>  }<br>}</p>
 <p>排序：取出最小（大）的数，其余的数进行堆化。</p>
@@ -602,8 +603,8 @@
 <h1 id="常见面试笔试题目"><a href="#常见面试笔试题目" class="headerlink" title="常见面试笔试题目"></a>常见面试笔试题目</h1><p>1、求平方根：</p>
 <p>(1)暴力求解，二分，牛顿迭代法（注意数值越界问题）：</p>
 <p>牛顿迭代公式如下，如果有函数f（x）=0，那么有如下递推公式：</p>
-<p><img src="/2019/04/08/数据结构与算法/C:/Users\Pan.Yanqi\AppData\Roaming\Typora\typora-user-images\1554442724770.png" alt="1554442724770"></p>
-<p><img src="/2019/04/08/数据结构与算法/C:/Users\Pan.Yanqi\AppData\Roaming\Typora\typora-user-images\1554443248625.png" alt="1554443248625"></p>
+<p><img src="/2019/04/08/数据结构与算法/Users\Pan.Yanqi\AppData\Roaming\Typora\typora-user-images\1554442724770.png" alt="1554442724770"></p>
+<p><img src="/2019/04/08/数据结构与算法/Users\Pan.Yanqi\AppData\Roaming\Typora\typora-user-images\1554443248625.png" alt="1554443248625"></p>
 <p>链表：链表反转，回文链表，链表相交，有环无环链表</p>
 <p>栈队列：最小栈，栈实现队列，队列实现栈</p>
 <p>字符串：BF,KMP匹配</p>
@@ -764,7 +765,7 @@
 <p>2、损失函数错误</p>
 <p>3、输入错误：pooling层的步长大于核的尺寸</p>
 <p>分类任务的输出层要用sigmoid函数：因为其输出是0-1之间</p>
-<p><img src="/2019/04/08/深度学习/I:/myBlog\blog\source\_posts\深度学习\1554444517470.png" alt="1554444517470"></p>
+<p><img src="/2019/04/08/深度学习/myBlog\blog\source\_posts\深度学习\1554444517470.png" alt="1554444517470"></p>
 
           
         
