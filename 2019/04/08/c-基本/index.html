@@ -96,14 +96,17 @@
 
 
 
-  <meta property="og:type" content="article">
+  <meta name="description" content="static:1、修饰普通变量（默认初始化，扩大声明周期），普通函数（限制在当前文件内调用），成员变量（对象共享），成员函数（可以通过::调用，不需要通过对象） 2、作用：隐藏，保持变量持久，默认初始化 const：顶层const表示本身是一个常量，底层const表示指向的对象是一个常量（与指针等符合类型相关） 泛型&amp;lt;模板&amp;gt;函数：使用模板实现泛型，模板要紧跟在泛型附近 https://">
+<meta property="og:type" content="article">
 <meta property="og:title" content="c++基本">
 <meta property="og:url" content="https://qiqiph.github.io/2019/04/08/c-基本/index.html">
 <meta property="og:site_name" content="PanYanqi&#39;s Blog">
+<meta property="og:description" content="static:1、修饰普通变量（默认初始化，扩大声明周期），普通函数（限制在当前文件内调用），成员变量（对象共享），成员函数（可以通过::调用，不需要通过对象） 2、作用：隐藏，保持变量持久，默认初始化 const：顶层const表示本身是一个常量，底层const表示指向的对象是一个常量（与指针等符合类型相关） 泛型&amp;lt;模板&amp;gt;函数：使用模板实现泛型，模板要紧跟在泛型附近 https://">
 <meta property="og:locale" content="Chinese">
-<meta property="og:updated_time" content="2019-04-08T08:23:24.573Z">
+<meta property="og:updated_time" content="2019-04-10T06:00:16.594Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="c++基本">
+<meta name="twitter:description" content="static:1、修饰普通变量（默认初始化，扩大声明周期），普通函数（限制在当前文件内调用），成员变量（对象共享），成员函数（可以通过::调用，不需要通过对象） 2、作用：隐藏，保持变量持久，默认初始化 const：顶层const表示本身是一个常量，底层const表示指向的对象是一个常量（与指针等符合类型相关） 泛型&amp;lt;模板&amp;gt;函数：使用模板实现泛型，模板要紧跟在泛型附近 https://">
 
 
 
@@ -333,6 +336,22 @@
             
 
             
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Bearbeitet am</span>
+                
+                <time title="Geändert am: 2019-04-10 14:00:16" itemprop="dateModified" datetime="2019-04-10T14:00:16+08:00">2019-04-10</time>
+              
+            
           </span>
 
           
@@ -364,7 +383,51 @@
       
 
       
-        
+        <h2 id="static"><a href="#static" class="headerlink" title="static:"></a>static:</h2><p>1、修饰普通变量（默认初始化，扩大声明周期），普通函数（限制在当前文件内调用），成员变量（对象共享），成员函数（可以通过::调用，不需要通过对象）</p>
+<p>2、作用：隐藏，保持变量持久，默认初始化</p>
+<h2 id="const："><a href="#const：" class="headerlink" title="const："></a><strong>const：</strong></h2><p>顶层const表示本身是一个常量，底层const表示指向的对象是一个常量（与指针等符合类型相关）</p>
+<h2 id="泛型-lt-模板-gt-函数："><a href="#泛型-lt-模板-gt-函数：" class="headerlink" title="泛型&lt;模板&gt;函数："></a>泛型&lt;模板&gt;函数：</h2><p>使用模板实现泛型，模板要紧跟在泛型附近</p>
+<p><a href="https://www.jianshu.com/p/ef02c6889605" target="_blank" rel="noopener">https://www.jianshu.com/p/ef02c6889605</a></p>
+<p>template<class t></class></p>
+<p>template<typename t></typename></p>
+<p><strong>泛型类型的指定</strong>：当泛型作为参数传递时，可以隐式获得泛型的类型，但是泛型不作为参数传递时，在调用时需要指定，否则会出现编译错误。</p>
+<p>比如：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">func</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span> </span>&#123;</span><br><span class="line">    <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">"泛型函数"</span> &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> a = <span class="number">10</span> , b = <span class="number">10</span>;</span><br><span class="line">    func(a,b);<span class="comment">//编译失败,类型不匹配</span></span><br><span class="line">    func&lt;<span class="keyword">int</span>&gt;(a,b); <span class="comment">//成功,显示指定</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>重载与泛型：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">plus&lt;int&gt;(a,b)//泛型函数调用(建议)</span><br><span class="line">    </span><br><span class="line">plus&lt;&gt;(a,b)//泛型函数调用,不必指明任何函数类型,但是明确告诉编译器我要泛型函数调用，在同时有一普通函数时使用，当泛型遇上普通函数，没有明确指定泛型调用时，如果参数类型与普通函数相同，使用普通函数</span><br></pre></td></tr></table></figure>
+<p><strong>泛型的隐式转换：</strong></p>
+<p>对隐式调用的函数，如果两个输入类型不一样，不能进行隐式转换，这个时候需要显示指定模板类型，当显式的指定了类型之后，可以跟普通函数一样进行转换。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span> &lt;<span class="class"><span class="keyword">class</span> <span class="title">T</span>&gt;</span></span><br><span class="line"><span class="class"><span class="title">int</span> <span class="title">plus</span>(<span class="title">T</span> <span class="title">a</span>, <span class="title">T</span> <span class="title">b</span>) &#123;</span></span><br><span class="line">    <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">"泛型函数调用"</span> &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">return</span> a + b;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">test</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> a = <span class="number">10</span>;</span><br><span class="line">    <span class="keyword">char</span> b = <span class="string">'b'</span></span><br><span class="line">    plus(a,b)<span class="comment">//编译无法通过</span></span><br><span class="line">    plus&lt;<span class="keyword">int</span>&gt;(a ,b)<span class="comment">//正确</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>模板函数实现机制：**</strong></p>
+<p>函数模板通过具体类型产生不同的函数，经过两次编译：模板函数声明时编译一次，调用时对参数替换后的代码编译一次</p>
+<h2 id="指针与数组："><a href="#指针与数组：" class="headerlink" title="指针与数组："></a><strong>指针与数组：</strong></h2><p>内存：</p>
+<p>数组：开辟的一个内存空间，放在静态存储区或者栈上，声明之后生命周期内，地址在空间中不变，只有内容可以改变</p>
+<p>指针：指向任意内存块的一个变量</p>
+<p>sizeof的区别：得到的数组总的内存大小，指针得到的始终是分配给指针的内存空间</p>
+<p><strong>指针与数组的地址操作</strong><a href="https://www.jianshu.com/p/2e0e4c246ae3" target="_blank" rel="noopener">https://www.jianshu.com/p/2e0e4c246ae3</a></p>
+<h2 id="引用与指针"><a href="#引用与指针" class="headerlink" title="引用与指针"></a>引用与指针</h2><p>引用是内存别名，不需要分配空间，必须在定义时初始化，之后不能改变，引用不会发生类型转换，</p>
+<p>指针指向一块内存空间，内容是存储内存的地址，引用不需要解引用，指针需要。</p>
+<p>引用作为值传递：无需拷贝</p>
+<p>作为参数返回：不需要重建返回值的内存空间</p>
+<h2 id="malloc和free-new和delete"><a href="#malloc和free-new和delete" class="headerlink" title="malloc和free/ new和delete"></a>malloc和free/ new和delete</h2><p>都能分配和释放内存，malloc和free是库函数，new和delete是运算符，new和delete调用和构造和析构函数，而malloc和free只是分配和释放，动态对象创建和消亡都必须调用构造和析构函数，mallo和free不能满足需求。</p>
+<p>底层：new先调用malloc，在使用构造//delete线使用析构函数，在使用free</p>
+<h2 id="动态对象"><a href="#动态对象" class="headerlink" title="动态对象"></a>动态对象</h2><p><a href="https://www.hahack.com/wiki/cpp-dynamic-object.html" target="_blank" rel="noopener">https://www.hahack.com/wiki/cpp-dynamic-object.html</a></p>
+<h2 id="类型转换"><a href="#类型转换" class="headerlink" title="类型转换"></a>类型转换</h2><p>static_cast:普通变量之间的转换，不能改变const,voliate属性，不是类型安全的</p>
+<p>dynamic_cast:用于类内转换，如果转换不成功（下行转换），返回null，相对类型安全</p>
+<p>const_cast 用于修改const,voliate变量属性</p>
+<p>re</p>
+<h1 id="STL基本知识"><a href="#STL基本知识" class="headerlink" title="STL基本知识"></a>STL基本知识</h1><h2 id="vector"><a href="#vector" class="headerlink" title="vector"></a><strong>vector</strong></h2><p><strong>基本操作</strong>：<a href="https://www.cnblogs.com/scandy-yuan/archive/2013/01/07/2849735.html" target="_blank" rel="noopener">https://www.cnblogs.com/scandy-yuan/archive/2013/01/07/2849735.html</a></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;v，v2;</span><br><span class="line">创建：</span><br><span class="line"><span class="built_in">vector</span>&lt;typr&gt;v1;</span><br><span class="line"><span class="built_in">vector</span>&lt;typr&gt;v1();</span><br><span class="line"><span class="built_in">vector</span>&lt;typr&gt;v1(n);</span><br><span class="line"><span class="built_in">vector</span>&lt;typr&gt;v1(n,elem);</span><br><span class="line"><span class="built_in">vector</span>&lt;typr&gt;v1(beg,end);</span><br><span class="line"></span><br><span class="line">v.pop_back();<span class="comment">//删除末尾元素</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//</span></span><br><span class="line">v2.assign(v.begin(),v.end());<span class="comment">//将v左闭右开区间赋值为v2</span></span><br><span class="line">v.assign(<span class="number">5</span>,<span class="number">10</span>);<span class="comment">//在v中放5个10</span></span><br><span class="line">迭代：</span><br><span class="line">iterator,反迭代 reverse_iterator</span><br><span class="line">v.capacity()<span class="comment">//返回给vector分配的区间</span></span><br><span class="line"></span><br><span class="line">clear()清空</span><br><span class="line">v.erase(pos);<span class="comment">//删除pos位置，返回下一个位置</span></span><br><span class="line">v.erase(beg,end);<span class="comment">//删除区间[beg,end)，传为下一个数据位置</span></span><br><span class="line">v.front(),v.back()<span class="comment">//第一个最后一个元素</span></span><br><span class="line"></span><br><span class="line">v.insert(pos,elem);<span class="comment">//在pos处插入elem,但会插入值的迭代器，pos需要是迭代器类型</span></span><br><span class="line">v.insert(pos,n,elem);<span class="comment">//插入n个elem,无返回值</span></span><br><span class="line">v.insert(pos,beg,end)<span class="comment">//插入[beg,end)区间的数据，无返回值</span></span><br><span class="line"></span><br><span class="line">v.resize(num);<span class="comment">//重置长度，大到小无用</span></span><br><span class="line">v.reserve(num)；<span class="comment">//两者的区别是reserve是预留大小，但是还没有真正创建元素对象，不能用[]赋值或者使用，而resize确实创建了原始对象，resize接收两个值，一个为num，一个为需要加入的新元素，如果没有，用默认构造函数初始化。</span></span><br><span class="line"></span><br><span class="line">v.swap(v1)/swap(v,v1);<span class="comment">//两者交换</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">vector</span>压缩：创建之后,使用括号赋值，并swap回去</span><br><span class="line"><span class="number">15</span>     <span class="comment">// insert code here...</span></span><br><span class="line"><span class="number">16</span>     <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; v;</span><br><span class="line"><span class="number">17</span>     v.push_back(<span class="number">1</span>);</span><br><span class="line"><span class="number">18</span>     v.push_back(<span class="number">2</span>);</span><br><span class="line"><span class="number">19</span>     v.push_back(<span class="number">3</span>);</span><br><span class="line"><span class="number">20</span>     <span class="built_in">cout</span> &lt;&lt; <span class="string">"v.capacity()"</span> &lt;&lt; v.capacity() &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"><span class="number">21</span>     </span><br><span class="line"><span class="number">22</span>     <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; (v).swap(v);</span><br><span class="line"><span class="number">23</span>     <span class="built_in">cout</span> &lt;&lt; <span class="string">"v.capacity()"</span> &lt;&lt; v.capacity() &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"><span class="number">24</span>     <span class="keyword">return</span> <span class="number">0</span>;<span class="comment">//输出4，3</span></span><br><span class="line"></span><br><span class="line">c++<span class="number">11</span>:v.shrink_to_fit()对其进行压缩</span><br></pre></td></tr></table></figure>
+<p><strong>面试常见问题</strong></p>
+<h2 id="map"><a href="#map" class="headerlink" title="map"></a>map</h2><h1 id="操作系统"><a href="#操作系统" class="headerlink" title="操作系统"></a>操作系统</h1><p>进程与线程的区别：</p>
+<p>进程——资源分配，线程——资源调度；无线程系统——资源调度与分配。一个进程只对应一个程序，通过进程标识符唯一确定，一个程序可能有多个进程（不同数据集的程序）</p>
+<h2 id="内存空间"><a href="#内存空间" class="headerlink" title="内存空间"></a>内存空间</h2><p>栈：编译器自动分配，比如存放函数参数</p>
+<p>堆：程序员分配与释放，比如new</p>
+<p>全局（静态区）：全局变量和静态变量</p>
+<p>常量区：存放常量，程序结束释放</p>
+<h2 id="类内成员暂用的空间："><a href="#类内成员暂用的空间：" class="headerlink" title="类内成员暂用的空间："></a>类内成员暂用的空间：</h2><p>无论有多少个虚函数，占用的是一个虚函数指针（指向虚函数表，父类子类共享一个虚函数表）的内存，32系统为4，成员函数不占内参，空类内参为1，成员变量的内存跟普通变量一样，静态变量不占用，因为已经放在全局区了。子类的内参=基类内参加子类自身</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
       
     </div>
 
@@ -403,6 +466,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/04/09/笔试错误题目总结/" rel="prev" title="笔试错误题目总结">
+                笔试错误题目总结 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -446,8 +513,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Inhaltsverzeichnis
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Übersicht
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -462,7 +538,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">8</span>
+                    <span class="site-state-item-count">9</span>
                     <span class="site-state-item-name">Artikel</span>
                   </a>
                 </div>
@@ -493,6 +569,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#static"><span class="nav-number">1.</span> <span class="nav-text">static:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#const："><span class="nav-number">2.</span> <span class="nav-text">const：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#泛型-lt-模板-gt-函数："><span class="nav-number">3.</span> <span class="nav-text">泛型&lt;模板&gt;函数：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#指针与数组："><span class="nav-number">4.</span> <span class="nav-text">指针与数组：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#引用与指针"><span class="nav-number">5.</span> <span class="nav-text">引用与指针</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#malloc和free-new和delete"><span class="nav-number">6.</span> <span class="nav-text">malloc和free/ new和delete</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#动态对象"><span class="nav-number">7.</span> <span class="nav-text">动态对象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#类型转换"><span class="nav-number">8.</span> <span class="nav-text">类型转换</span></a></li></ol><li class="nav-item nav-level-1"><a class="nav-link" href="#STL基本知识"><span class="nav-number"></span> <span class="nav-text">STL基本知识</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#vector"><span class="nav-number">1.</span> <span class="nav-text">vector</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#map"><span class="nav-number">2.</span> <span class="nav-text">map</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#操作系统"><span class="nav-number"></span> <span class="nav-text">操作系统</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#内存空间"><span class="nav-number">1.</span> <span class="nav-text">内存空间</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#类内成员暂用的空间："><span class="nav-number">2.</span> <span class="nav-text">类内成员暂用的空间：</span></a></li></ol></li></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       

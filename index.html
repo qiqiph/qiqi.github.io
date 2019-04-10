@@ -286,6 +286,157 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://qiqiph.github.io/2019/04/09/笔试错误题目总结/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="PanYanqi">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="PanYanqi's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/04/09/笔试错误题目总结/" class="post-title-link" itemprop="url">笔试错误题目总结</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+
+              
+                
+              
+
+              <time title="Erstellt: 2019-04-09 22:15:35 / Geändert am: 23:07:39" itemprop="dateCreated datePublished" datetime="2019-04-09T22:15:35+08:00">2019-04-09</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>招银信用卡中心笔试：</p>
+<p>1、第一道题</p>
+<p>注意数据的越界问题，所以需要取模运算</p>
+<p>2、第二道题</p>
+<p>简单的数学运算</p>
+<p>3、求最小的运算次数，求最大公？？</p>
+<p>输入 3/8 4 2，两次 / 输入 3 /3 5 6，需要5次</p>
+<h1 id="整数拆分为连续自然数之和"><a href="#整数拆分为连续自然数之和" class="headerlink" title="整数拆分为连续自然数之和"></a>整数拆分为连续自然数之和</h1><p><a href="https://blog.csdn.net/kennyrose/article/details/6544518" target="_blank" rel="noopener">https://blog.csdn.net/kennyrose/article/details/6544518</a></p>
+<p>等差数列求和公式：</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://qiqiph.github.io/2019/04/08/c-基本/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -335,6 +486,22 @@
             
 
             
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Bearbeitet am</span>
+                
+                <time title="Geändert am: 2019-04-10 14:00:16" itemprop="dateModified" datetime="2019-04-10T14:00:16+08:00">2019-04-10</time>
+              
+            
           </span>
 
           
@@ -368,7 +535,51 @@
       
         
           
-            
+            <h2 id="static"><a href="#static" class="headerlink" title="static:"></a>static:</h2><p>1、修饰普通变量（默认初始化，扩大声明周期），普通函数（限制在当前文件内调用），成员变量（对象共享），成员函数（可以通过::调用，不需要通过对象）</p>
+<p>2、作用：隐藏，保持变量持久，默认初始化</p>
+<h2 id="const："><a href="#const：" class="headerlink" title="const："></a><strong>const：</strong></h2><p>顶层const表示本身是一个常量，底层const表示指向的对象是一个常量（与指针等符合类型相关）</p>
+<h2 id="泛型-lt-模板-gt-函数："><a href="#泛型-lt-模板-gt-函数：" class="headerlink" title="泛型&lt;模板&gt;函数："></a>泛型&lt;模板&gt;函数：</h2><p>使用模板实现泛型，模板要紧跟在泛型附近</p>
+<p><a href="https://www.jianshu.com/p/ef02c6889605" target="_blank" rel="noopener">https://www.jianshu.com/p/ef02c6889605</a></p>
+<p>template<class t></class></p>
+<p>template<typename t></typename></p>
+<p><strong>泛型类型的指定</strong>：当泛型作为参数传递时，可以隐式获得泛型的类型，但是泛型不作为参数传递时，在调用时需要指定，否则会出现编译错误。</p>
+<p>比如：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">func</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span> </span>&#123;</span><br><span class="line">    <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">"泛型函数"</span> &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> a = <span class="number">10</span> , b = <span class="number">10</span>;</span><br><span class="line">    func(a,b);<span class="comment">//编译失败,类型不匹配</span></span><br><span class="line">    func&lt;<span class="keyword">int</span>&gt;(a,b); <span class="comment">//成功,显示指定</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>重载与泛型：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">plus&lt;int&gt;(a,b)//泛型函数调用(建议)</span><br><span class="line">    </span><br><span class="line">plus&lt;&gt;(a,b)//泛型函数调用,不必指明任何函数类型,但是明确告诉编译器我要泛型函数调用，在同时有一普通函数时使用，当泛型遇上普通函数，没有明确指定泛型调用时，如果参数类型与普通函数相同，使用普通函数</span><br></pre></td></tr></table></figure>
+<p><strong>泛型的隐式转换：</strong></p>
+<p>对隐式调用的函数，如果两个输入类型不一样，不能进行隐式转换，这个时候需要显示指定模板类型，当显式的指定了类型之后，可以跟普通函数一样进行转换。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span> &lt;<span class="class"><span class="keyword">class</span> <span class="title">T</span>&gt;</span></span><br><span class="line"><span class="class"><span class="title">int</span> <span class="title">plus</span>(<span class="title">T</span> <span class="title">a</span>, <span class="title">T</span> <span class="title">b</span>) &#123;</span></span><br><span class="line">    <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">"泛型函数调用"</span> &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">return</span> a + b;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">test</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> a = <span class="number">10</span>;</span><br><span class="line">    <span class="keyword">char</span> b = <span class="string">'b'</span></span><br><span class="line">    plus(a,b)<span class="comment">//编译无法通过</span></span><br><span class="line">    plus&lt;<span class="keyword">int</span>&gt;(a ,b)<span class="comment">//正确</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>模板函数实现机制：**</strong></p>
+<p>函数模板通过具体类型产生不同的函数，经过两次编译：模板函数声明时编译一次，调用时对参数替换后的代码编译一次</p>
+<h2 id="指针与数组："><a href="#指针与数组：" class="headerlink" title="指针与数组："></a><strong>指针与数组：</strong></h2><p>内存：</p>
+<p>数组：开辟的一个内存空间，放在静态存储区或者栈上，声明之后生命周期内，地址在空间中不变，只有内容可以改变</p>
+<p>指针：指向任意内存块的一个变量</p>
+<p>sizeof的区别：得到的数组总的内存大小，指针得到的始终是分配给指针的内存空间</p>
+<p><strong>指针与数组的地址操作</strong><a href="https://www.jianshu.com/p/2e0e4c246ae3" target="_blank" rel="noopener">https://www.jianshu.com/p/2e0e4c246ae3</a></p>
+<h2 id="引用与指针"><a href="#引用与指针" class="headerlink" title="引用与指针"></a>引用与指针</h2><p>引用是内存别名，不需要分配空间，必须在定义时初始化，之后不能改变，引用不会发生类型转换，</p>
+<p>指针指向一块内存空间，内容是存储内存的地址，引用不需要解引用，指针需要。</p>
+<p>引用作为值传递：无需拷贝</p>
+<p>作为参数返回：不需要重建返回值的内存空间</p>
+<h2 id="malloc和free-new和delete"><a href="#malloc和free-new和delete" class="headerlink" title="malloc和free/ new和delete"></a>malloc和free/ new和delete</h2><p>都能分配和释放内存，malloc和free是库函数，new和delete是运算符，new和delete调用和构造和析构函数，而malloc和free只是分配和释放，动态对象创建和消亡都必须调用构造和析构函数，mallo和free不能满足需求。</p>
+<p>底层：new先调用malloc，在使用构造//delete线使用析构函数，在使用free</p>
+<h2 id="动态对象"><a href="#动态对象" class="headerlink" title="动态对象"></a>动态对象</h2><p><a href="https://www.hahack.com/wiki/cpp-dynamic-object.html" target="_blank" rel="noopener">https://www.hahack.com/wiki/cpp-dynamic-object.html</a></p>
+<h2 id="类型转换"><a href="#类型转换" class="headerlink" title="类型转换"></a>类型转换</h2><p>static_cast:普通变量之间的转换，不能改变const,voliate属性，不是类型安全的</p>
+<p>dynamic_cast:用于类内转换，如果转换不成功（下行转换），返回null，相对类型安全</p>
+<p>const_cast 用于修改const,voliate变量属性</p>
+<p>re</p>
+<h1 id="STL基本知识"><a href="#STL基本知识" class="headerlink" title="STL基本知识"></a>STL基本知识</h1><h2 id="vector"><a href="#vector" class="headerlink" title="vector"></a><strong>vector</strong></h2><p><strong>基本操作</strong>：<a href="https://www.cnblogs.com/scandy-yuan/archive/2013/01/07/2849735.html" target="_blank" rel="noopener">https://www.cnblogs.com/scandy-yuan/archive/2013/01/07/2849735.html</a></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;v，v2;</span><br><span class="line">创建：</span><br><span class="line"><span class="built_in">vector</span>&lt;typr&gt;v1;</span><br><span class="line"><span class="built_in">vector</span>&lt;typr&gt;v1();</span><br><span class="line"><span class="built_in">vector</span>&lt;typr&gt;v1(n);</span><br><span class="line"><span class="built_in">vector</span>&lt;typr&gt;v1(n,elem);</span><br><span class="line"><span class="built_in">vector</span>&lt;typr&gt;v1(beg,end);</span><br><span class="line"></span><br><span class="line">v.pop_back();<span class="comment">//删除末尾元素</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//</span></span><br><span class="line">v2.assign(v.begin(),v.end());<span class="comment">//将v左闭右开区间赋值为v2</span></span><br><span class="line">v.assign(<span class="number">5</span>,<span class="number">10</span>);<span class="comment">//在v中放5个10</span></span><br><span class="line">迭代：</span><br><span class="line">iterator,反迭代 reverse_iterator</span><br><span class="line">v.capacity()<span class="comment">//返回给vector分配的区间</span></span><br><span class="line"></span><br><span class="line">clear()清空</span><br><span class="line">v.erase(pos);<span class="comment">//删除pos位置，返回下一个位置</span></span><br><span class="line">v.erase(beg,end);<span class="comment">//删除区间[beg,end)，传为下一个数据位置</span></span><br><span class="line">v.front(),v.back()<span class="comment">//第一个最后一个元素</span></span><br><span class="line"></span><br><span class="line">v.insert(pos,elem);<span class="comment">//在pos处插入elem,但会插入值的迭代器，pos需要是迭代器类型</span></span><br><span class="line">v.insert(pos,n,elem);<span class="comment">//插入n个elem,无返回值</span></span><br><span class="line">v.insert(pos,beg,end)<span class="comment">//插入[beg,end)区间的数据，无返回值</span></span><br><span class="line"></span><br><span class="line">v.resize(num);<span class="comment">//重置长度，大到小无用</span></span><br><span class="line">v.reserve(num)；<span class="comment">//两者的区别是reserve是预留大小，但是还没有真正创建元素对象，不能用[]赋值或者使用，而resize确实创建了原始对象，resize接收两个值，一个为num，一个为需要加入的新元素，如果没有，用默认构造函数初始化。</span></span><br><span class="line"></span><br><span class="line">v.swap(v1)/swap(v,v1);<span class="comment">//两者交换</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">vector</span>压缩：创建之后,使用括号赋值，并swap回去</span><br><span class="line"><span class="number">15</span>     <span class="comment">// insert code here...</span></span><br><span class="line"><span class="number">16</span>     <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; v;</span><br><span class="line"><span class="number">17</span>     v.push_back(<span class="number">1</span>);</span><br><span class="line"><span class="number">18</span>     v.push_back(<span class="number">2</span>);</span><br><span class="line"><span class="number">19</span>     v.push_back(<span class="number">3</span>);</span><br><span class="line"><span class="number">20</span>     <span class="built_in">cout</span> &lt;&lt; <span class="string">"v.capacity()"</span> &lt;&lt; v.capacity() &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"><span class="number">21</span>     </span><br><span class="line"><span class="number">22</span>     <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; (v).swap(v);</span><br><span class="line"><span class="number">23</span>     <span class="built_in">cout</span> &lt;&lt; <span class="string">"v.capacity()"</span> &lt;&lt; v.capacity() &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"><span class="number">24</span>     <span class="keyword">return</span> <span class="number">0</span>;<span class="comment">//输出4，3</span></span><br><span class="line"></span><br><span class="line">c++<span class="number">11</span>:v.shrink_to_fit()对其进行压缩</span><br></pre></td></tr></table></figure>
+<p><strong>面试常见问题</strong></p>
+<h2 id="map"><a href="#map" class="headerlink" title="map"></a>map</h2><h1 id="操作系统"><a href="#操作系统" class="headerlink" title="操作系统"></a>操作系统</h1><p>进程与线程的区别：</p>
+<p>进程——资源分配，线程——资源调度；无线程系统——资源调度与分配。一个进程只对应一个程序，通过进程标识符唯一确定，一个程序可能有多个进程（不同数据集的程序）</p>
+<h2 id="内存空间"><a href="#内存空间" class="headerlink" title="内存空间"></a>内存空间</h2><p>栈：编译器自动分配，比如存放函数参数</p>
+<p>堆：程序员分配与释放，比如new</p>
+<p>全局（静态区）：全局变量和静态变量</p>
+<p>常量区：存放常量，程序结束释放</p>
+<h2 id="类内成员暂用的空间："><a href="#类内成员暂用的空间：" class="headerlink" title="类内成员暂用的空间："></a>类内成员暂用的空间：</h2><p>无论有多少个虚函数，占用的是一个虚函数指针（指向虚函数表，父类子类共享一个虚函数表）的内存，32系统为4，成员函数不占内参，空类内参为1，成员变量的内存跟普通变量一样，静态变量不占用，因为已经放在全局区了。子类的内参=基类内参加子类自身</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
           
         
       
@@ -469,12 +680,24 @@
                 
               
 
-              <time title="Erstellt: 2019-04-08 16:21:27 / Geändert am: 16:21:38" itemprop="dateCreated datePublished" datetime="2019-04-08T16:21:27+08:00">2019-04-08</time>
+              <time title="Erstellt: 2019-04-08 16:21:27" itemprop="dateCreated datePublished" datetime="2019-04-08T16:21:27+08:00">2019-04-08</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Bearbeitet am</span>
+                
+                <time title="Geändert am: 2019-04-09 10:14:30" itemprop="dateModified" datetime="2019-04-09T10:14:30+08:00">2019-04-09</time>
               
             
           </span>
@@ -517,6 +740,7 @@
 <p>二进制到16进制：逢四合一</p>
 <p>三角函数常见公式</p>
 <p><a href="https://blog.csdn.net/a396901990/article/details/43998935" target="_blank" rel="noopener">https://blog.csdn.net/a396901990/article/details/43998935</a></p>
+<h2 id="偏差与方差"><a href="#偏差与方差" class="headerlink" title="偏差与方差"></a>偏差与方差</h2><p><a href="http://liuchengxu.org/blog-cn/posts/bias-variance/" target="_blank" rel="noopener">http://liuchengxu.org/blog-cn/posts/bias-variance/</a></p>
 
           
         
@@ -760,6 +984,22 @@
             
 
             
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Bearbeitet am</span>
+                
+                <time title="Geändert am: 2019-04-10 15:25:22" itemprop="dateModified" datetime="2019-04-10T15:25:22+08:00">2019-04-10</time>
+              
+            
           </span>
 
           
@@ -793,7 +1033,18 @@
       
         
           
-            
+            <h1 id="一、计算机图形学相关"><a href="#一、计算机图形学相关" class="headerlink" title="一、计算机图形学相关"></a>一、计算机图形学相关</h1><p><a href="https://blog.csdn.net/zhaotianyu950323/article/details/79955805" target="_blank" rel="noopener">https://blog.csdn.net/zhaotianyu950323/article/details/79955805</a><br><a href="https://github.com/HolenYHR/Review_of_Computer_Graphics" target="_blank" rel="noopener">https://github.com/HolenYHR/Review_of_Computer_Graphics</a><br>《3D数学基础：图形与游戏开发》<br>顶点着色器，图元装配，几何着色器</p>
+<h2 id="1、什么是光栅化"><a href="#1、什么是光栅化" class="headerlink" title="1、什么是光栅化"></a>1、什么是光栅化</h2><p>负责整个渲染过程中的几何成像环节，把几何图元（点，线，面）投影到成像平面并确定哪些像素或者采样点被图元覆盖。<br>输入：三角形三个顶点，输出：三角形会覆盖屏幕上哪些像素</p>
+<h2 id="2、什么是光线跟踪"><a href="#2、什么是光线跟踪" class="headerlink" title="2、什么是光线跟踪"></a>2、什么是光线跟踪</h2><h2 id="3、渲染过程"><a href="#3、渲染过程" class="headerlink" title="3、渲染过程"></a>3、渲染过程</h2><p>vtk渲染：data-mapper-actor-render-renderwinodow-交互<br><img src="en-resource://database/1938:1" alt="c8d641081e4ef27dbc6cbf743dfbc3ad.png"><br><img src="en-resource://database/1940:1" alt="22c331f01da35d684804173f49ed06b3.png"></p>
+<h2 id="4、游戏引擎包括什么"><a href="#4、游戏引擎包括什么" class="headerlink" title="4、游戏引擎包括什么"></a>4、游戏引擎包括什么</h2><h2 id="5、三维模型空间变换"><a href="#5、三维模型空间变换" class="headerlink" title="5、三维模型空间变换"></a>5、三维模型空间变换</h2><p>五个坐标系：世界，模型，摄像机，裁剪空间，屏幕空间。<br>模型——模型矩阵——世界坐标系——view矩阵——摄像机坐标系——投影矩阵——投影坐标系——裁剪平面——viewport——屏幕坐标系<br>空间变换矩阵：模型矩阵（物体平移，旋转缩放），观察矩阵（通过平移，旋转，缩放移动场景），投影矩阵（将观察者坐标系转换到裁剪坐标系）</p>
+<h2 id="6、怎么判断一个点在三角形里面"><a href="#6、怎么判断一个点在三角形里面" class="headerlink" title="6、怎么判断一个点在三角形里面"></a>6、怎么判断一个点在三角形里面</h2><h2 id="7、纹理滤波"><a href="#7、纹理滤波" class="headerlink" title="7、纹理滤波"></a>7、纹理滤波</h2><h2 id="8、几何着色器的作用"><a href="#8、几何着色器的作用" class="headerlink" title="8、几何着色器的作用"></a>8、几何着色器的作用</h2><p>顶点着色器：计算顶点的位置，并将顶点投影到二维屏幕上<br>几何着色器：将形状（图元）划分为更多的形状（图元）<br>片段着色器：根据顶点着色器和几何着色器输出的插值，计算每个片源的颜色，之后进行测试和混合</p>
+<h2 id="9、深度测试"><a href="#9、深度测试" class="headerlink" title="9、深度测试"></a>9、深度测试</h2><p>深度缓存算法：保存每个像素的深度</p>
+<h2 id="10、碰撞检测、碰撞盒、效率优化"><a href="#10、碰撞检测、碰撞盒、效率优化" class="headerlink" title="10、碰撞检测、碰撞盒、效率优化"></a>10、碰撞检测、碰撞盒、效率优化</h2><h2 id="11、项目中的数据结构：vtk"><a href="#11、项目中的数据结构：vtk" class="headerlink" title="11、项目中的数据结构：vtk"></a>11、项目中的数据结构：vtk</h2><h2 id="12、蒙皮的原理"><a href="#12、蒙皮的原理" class="headerlink" title="12、蒙皮的原理"></a>12、蒙皮的原理</h2><h2 id="旋转的三种方法："><a href="#旋转的三种方法：" class="headerlink" title="旋转的三种方法："></a>旋转的三种方法：</h2><p>旋转矩阵（4<em> 4），欧拉角，四元数。三种方法的优缺点：<br>旋转矩阵：4</em> 4 16个元素表示一个向量——一个角度四个值，增加计算量，造成空间浪费，但是这种方式旋转轴可以是任意的向量。<br>欧拉旋转：容易理解，用3个值（对应自身局部x,y,z的旋转角度）表示但是转换效率不如四元数。欧拉旋转存在万向节锁的现象，原因：旋转过程中造成了某些坐标轴重合，导致失去了某个方向的旋转功能（<a href="https://www.zhihu.com/question/47736315/answer/236284413）" target="_blank" rel="noopener">https://www.zhihu.com/question/47736315/answer/236284413）</a><br>四元数旋转：用四个数表示任意绕任意过原点的向量的旋转，方便快捷，在某些实现下比旋转矩阵效率更高，可以提高平滑插值</p>
+<h2 id="13、冯氏光照模型"><a href="#13、冯氏光照模型" class="headerlink" title="13、冯氏光照模型"></a>13、冯氏光照模型</h2><p>光照：环境，漫反射，镜面反射</p>
+<h1 id="二、深度学习相关"><a href="#二、深度学习相关" class="headerlink" title="二、深度学习相关"></a>二、深度学习相关</h1><p>深度预测网络/GAN网络</p>
+<h1 id="图像相关"><a href="#图像相关" class="headerlink" title="图像相关"></a>图像相关</h1><p>双线性插值，重采样方法</p>
+<h1 id="三、Qt相关"><a href="#三、Qt相关" class="headerlink" title="三、Qt相关"></a>三、Qt相关</h1><h1 id="VTK相关"><a href="#VTK相关" class="headerlink" title="VTK相关"></a>VTK相关</h1><h1 id="C-相关"><a href="#C-相关" class="headerlink" title="C++相关"></a>C++相关</h1><h1 id="四、测试流程相关"><a href="#四、测试流程相关" class="headerlink" title="四、测试流程相关"></a>四、测试流程相关</h1><p>markdown使用教程：<a href="https://list.yinxiang.com/markdown/eef42447-db3f-48ee-827b-1bb34c03eb83.php" target="_blank" rel="noopener">https://list.yinxiang.com/markdown/eef42447-db3f-48ee-827b-1bb34c03eb83.php</a></p>
+
           
         
       
@@ -1049,12 +1300,24 @@
                 
               
 
-              <time title="Erstellt: 2019-04-08 16:18:07 / Geändert am: 16:19:45" itemprop="dateCreated datePublished" datetime="2019-04-08T16:18:07+08:00">2019-04-08</time>
+              <time title="Erstellt: 2019-04-08 16:18:07" itemprop="dateCreated datePublished" datetime="2019-04-08T16:18:07+08:00">2019-04-08</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Bearbeitet am</span>
+                
+                <time title="Geändert am: 2019-04-10 00:00:20" itemprop="dateModified" datetime="2019-04-10T00:00:20+08:00">2019-04-10</time>
               
             
           </span>
@@ -1141,13 +1404,27 @@
 <p>计数排序：</p>
 <p>桶排序：</p>
 <p>排序算法比较:</p>
-<h2 id="二分："><a href="#二分：" class="headerlink" title="二分："></a>二分：</h2><p>复杂度为O(logn)</p>
+<p><strong>题目：</strong></p>
+<p><strong>1、归并排序</strong>——数组中的逆序对:该题的难点在于求数字过大时出现的越界问题</p>
+<p>归并排序伪代码：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">sort(<span class="built_in">array</span>):</span><br><span class="line">   sort(<span class="built_in">array</span>,<span class="number">0</span>,n<span class="number">-1</span>);</span><br><span class="line">sort(<span class="built_in">array</span>,p,r)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span>(p&gt;=r)<span class="keyword">return</span>;</span><br><span class="line">    q=(p+r)/<span class="number">2</span></span><br><span class="line">    sort(<span class="built_in">array</span>,p,q);</span><br><span class="line">    sort(<span class="built_in">array</span>,q,r);</span><br><span class="line">    merge(<span class="built_in">array</span>,p,q,r);</span><br><span class="line">&#125;</span><br><span class="line">merge(<span class="built_in">array</span>,p,q,r)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">//临时数组,双游标</span></span><br><span class="line">    temp;</span><br><span class="line">    i=p；j=q+<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">int</span> n=p;</span><br><span class="line">    <span class="keyword">while</span>(p&lt;=q&amp;&amp;j&lt;=r)</span><br><span class="line">    &#123;</span><br><span class="line">        temp[n]=<span class="built_in">array</span>[i]&gt;<span class="built_in">array</span>[j]?<span class="built_in">array</span>[j]:<span class="built_in">array</span>[i]</span><br><span class="line">        i++或者j++</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//把temp的值替换到array相应的位置</span></span><br><span class="line">     ......</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="二分："><a href="#二分：" class="headerlink" title="二分："></a>二分：</h2><p><strong>复杂度为O(logn)</strong></p>
 <p>初级二分：对于有序数组，两个游标low和high，分为middle=(low+high)/2,比较需要查找的value与middle的大小关系，然后更新low和high，如果low&gt;high,退出查找。</p>
-<p>二分算法需要注意的地方：</p>
+<p><strong>二分算法需要注意的地方：</strong></p>
 <p>（1)循环退出条件</p>
 <p>（2）mid的取值，如果mid=(low+high)/2,会导致low+high溢出，所以使用mid=low+(high-low)/2更新</p>
 <p>（3）low和high的更新，low=mid+1，high=mid-1;</p>
 <p>应用场景：顺序表结构，针对有序数据，数据量不能太小也不能太大。</p>
+<p>复杂二分：</p>
+<p>求第一个出现，最后一个出现的位置判断条件：</p>
+<p><strong>第一个出现k的位置</strong>：二分等于k时向前搜索，判断条件如下：</p>
+<p><img src="//qiqiph.github.io/2019/04/08/数据结构与算法/Users\Pan.Yanqi\AppData\Roaming\Typora\typora-user-images\1554726366930.png" alt="1554726366930"></p>
+<p><strong>最后一个出现k的位置</strong>：二分等于k时，向后搜索判断，条件如下：</p>
+<p><img src="//qiqiph.github.io/2019/04/08/数据结构与算法/Users\Pan.Yanqi\AppData\Roaming\Typora\typora-user-images\1554726444639.png" alt="1554726444639"></p>
+<p><strong>例题</strong></p>
+<p>1、有序数组中，出现k的次数：</p>
+<p>（1）找到第一个出现K的位置和最后一个出现K的位置，两者序号相加。</p>
+<p>（2）取巧的方法，当数组为整数，判断k+0.5和k-0.5应该插入的位置，两者相减</p>
 <h2 id="字符串匹配"><a href="#字符串匹配" class="headerlink" title="字符串匹配"></a>字符串匹配</h2><p>主串和模式串进行匹配：</p>
 <p>（1）最简单的方式暴力匹配<strong>BF</strong>，时间复杂度是O（n*m）</p>
 <p>（2<strong>）BK</strong>（Rabin-Karp）时间复杂度是O（n）：我们通过哈希算法对主串中的 n-m+1 个子串分别求哈希值，然后与模式串的hash值进行对比。如果没有好的hash处理技巧，那么时间复杂度还是没有降低（求子串hash时也需要遍历）。重点：如何建立一个hash映射——假设字符串只是由字母组成，那么以26进制去见一个hash函数，比如：abc子串hash值为1<em> 26 </em>26+2<em>26+3，注意对比可以知道前一个子串hash值与下一个有关系，可以减少运算，并且还可以将26的n次方存入表，避免重复计算。其他问题：hash值越界问题，使用简单的hash导致冲突，极端境况下复杂度退化为O（n</em>m）。</p>
@@ -1178,6 +1455,14 @@
 <p>1、找到递推关系</p>
 <p>2、找到出口信息</p>
 <p>3、将递归转为循环：找到合适的数组保存中间overlap的内容，在数组中要表示初始化的出口</p>
+<p><strong>题目：</strong></p>
+<p>1、连续子数组的最大和，状态方程如下：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//状态转换方程</span></span><br><span class="line">    <span class="comment">//f[i]=max(f[i-1]+A[i],A[i]);</span></span><br><span class="line">    <span class="comment">//maxsum=max[f(i)]</span></span><br></pre></td></tr></table></figure>
+<p>2、把数组排成最小的数：</p>
+<p><strong>//需要先将数组进行排序</strong></p>
+<p>//动态规划状态方程：</p>
+<p>//f(i)=f(i-1)与A[i]拼接，拼接时比较字符串判断是放在字符前面还是后面</p>
+<p>//f(i)=A[i]</p>
 <h1 id="常见面试笔试题目"><a href="#常见面试笔试题目" class="headerlink" title="常见面试笔试题目"></a>常见面试笔试题目</h1><p>1、求平方根：</p>
 <p>(1)暴力求解，二分，牛顿迭代法（注意数值越界问题）：</p>
 <p>牛顿迭代公式如下，如果有函数f（x）=0，那么有如下递推公式：</p>
@@ -1190,6 +1475,8 @@
 <p>图：广度优先，深度优先查找，生成树和最小生成树，最短路径，拓扑排序等</p>
 <p>查找：线性表查找，树表查找，哈希表查找</p>
 <p>排序:八大排序算法，高频：归并，堆排，快排</p>
+<h3 id="单链表环的入口以及有环无环："><a href="#单链表环的入口以及有环无环：" class="headerlink" title="单链表环的入口以及有环无环："></a>单链表环的入口以及有环无环：</h3><p>双指针：fast移动2步，low移动1步判断相遇；得到相遇点encounter。</p>
+<p>判断环的入口：假设相遇点距离入口距离y，入口到起始距离为x，环长度为r，那么有x=nr-y,r表示相遇前fast的行走圈数，让两个指针移动，步长均为1，一个从相遇点开始移动，一个从起始移动，当两个相等时即为环的入口。</p>
 
           
         
@@ -1291,12 +1578,24 @@
                 
               
 
-              <time title="Erstellt: 2019-04-08 09:31:22 / Geändert am: 15:44:05" itemprop="dateCreated datePublished" datetime="2019-04-08T09:31:22+08:00">2019-04-08</time>
+              <time title="Erstellt: 2019-04-08 09:31:22" itemprop="dateCreated datePublished" datetime="2019-04-08T09:31:22+08:00">2019-04-08</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Bearbeitet am</span>
+                
+                <time title="Geändert am: 2019-04-09 23:23:51" itemprop="dateModified" datetime="2019-04-09T23:23:51+08:00">2019-04-09</time>
               
             
           </span>
@@ -1333,16 +1632,57 @@
         
           
             <p>问题：</p>
-<p>1、dropout的缺点是成本函数无法被明确定义？使用dropout时，先确认成本函数单调递减，在打开dropout??</p>
-<p>2、relu是线性的，其能够拟合问题吗？？</p>
-<p>3、梯度消失与梯度爆炸：根本原因都是反向传播过程中梯度更新的问题。</p>
+<p>1、dropout的缺点是成本函数无法被明确定义？使用dropout时，先确认成本函数单调递减，再打开dropout<strong>??</strong></p>
+<p>2、relu是线性的，其能够拟合问题吗<strong>？？</strong></p>
+<h2 id="梯度消失与梯度爆炸："><a href="#梯度消失与梯度爆炸：" class="headerlink" title="梯度消失与梯度爆炸："></a><strong>梯度消失与梯度爆炸</strong>：</h2><p>根本原因都是反向传播过程中梯度更新的问题。</p>
 <p>比如使用sigmodi函数是，最大梯度为1/4，如果w&lt;1,那么导数*w&lt;1/4,根据链式求导法则，前面的层比后面的层更新慢，导致梯度消失。</p>
 <p>梯度爆炸：w&gt;4时，梯度以指数形式增长，导致梯度爆炸</p>
-<p>出现loss=nan的原因:直观上就是loss值太大，数字越界了：原因可能有：</p>
+<p><strong>解决方法</strong>：</p>
+<p>1、初始化缓解，梯度裁剪、正则化：</p>
+<p>裁剪：设置梯度裁剪阈值，将梯度限制在某个范围之内。</p>
+<p>正则化：在损失函数中加入该值，防止出现w过大的情况</p>
+<p>2、使用relu激活函数</p>
+<p>3、<strong>BN</strong>：batch normalization批规范化，使数据具有相同的分布，</p>
+<p>4、残差结构</p>
+<p>5、LSTM</p>
+<p><strong>出现loss=nan的原因</strong>:直观上就是loss值太大，数字越界了：原因可能有：</p>
 <p>1、梯度爆炸：学习率设置等原因导致一开始的时候w就偏大</p>
 <p>2、损失函数错误</p>
 <p>3、输入错误：pooling层的步长大于核的尺寸</p>
+<p><strong>数据归一化的作用</strong></p>
 <p>分类任务的输出层要用sigmoid函数：因为其输出是0-1之间</p>
+<h2 id="激活函数"><a href="#激活函数" class="headerlink" title="激活函数"></a>激活函数</h2><p>1、relu：优点——防止梯度爆炸，消失，加速网络训练，缺点——负数部分恒为0，导致一些神经元无法激活（通过设置小学习率部分解决<strong>？？</strong>）</p>
+<h2 id="泛化："><a href="#泛化：" class="headerlink" title="泛化："></a><strong>泛化：</strong></h2><p>提高泛化能力根本上是让神经网络更好的拟合输入，那么就不能让神经网络中的某个权重特别大，使用正则化，dropout等实现</p>
+<p>正则化：</p>
+<h2 id="归一化标准化与正则化"><a href="#归一化标准化与正则化" class="headerlink" title="归一化标准化与正则化"></a>归一化标准化与正则化</h2><p>归一化：线性/非线性映射到某一区间，防止某个特征的影响覆盖其他的特征</p>
+<p><a href="https://zhuanlan.zhihu.com/p/29957294" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/29957294</a></p>
+<h3 id="BN标准化："><a href="#BN标准化：" class="headerlink" title="BN标准化："></a><strong>BN标准化：</strong></h3><p>x=(x-平均值)/方差</p>
+<p>直观理解：batchnorm降低了数据之间的绝对差异，有一个去相关的性质，更多的考虑相对差异性，因此在分类任务上具有更好的效果。</p>
+<p><img src="https://img-blog.csdn.net/20180112195606874?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMjU3MzcxNjk=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="è¿éåå¾çæè¿°"></p>
+<p><strong>设置 γ 和 β 的原因</strong>是，如果各隐藏层的输入均值在靠近 0 的区域，即处于激活函数的线性区域，不利于训练非线性神经网络，从而得到效果较差的模型。因此，需要用 γ 和 β 对标准化后的结果做进一步处理。</p>
+<h3 id="正则化：l1-l2-dropout"><a href="#正则化：l1-l2-dropout" class="headerlink" title="正则化：l1,l2,dropout"></a>正则化：l1,l2,dropout</h3><h2 id="梯度验证"><a href="#梯度验证" class="headerlink" title="梯度验证"></a>梯度验证</h2><p>检查代码是否有错</p>
+<h2 id="优化算法"><a href="#优化算法" class="headerlink" title="优化算法"></a>优化算法</h2><p>随机梯度下降（SGD,）：</p>
+<h2 id="超参数调整"><a href="#超参数调整" class="headerlink" title="超参数调整"></a>超参数调整</h2><p>最重要：学习率</p>
+<p>齐次：动量衰减函数，隐藏层神经元个数，mini-batch大小</p>
+<p>再次：Adam优化中的β1，β2，ϵ；神经网络层数，学习衰减率</p>
+<h2 id="sotfmax："><a href="#sotfmax：" class="headerlink" title="sotfmax："></a>sotfmax：</h2><p>多分类问题</p>
+<h2 id="机器学习策略："><a href="#机器学习策略：" class="headerlink" title="机器学习策略："></a><strong>机器学习策略</strong>：</h2><p>评价标准，人类误差，贝叶斯误差，精确率和召回率，调和平均数</p>
+<p><img src="//qiqiph.github.io/2019/04/08/深度学习/Users\Pan.Yanqi\AppData\Roaming\Typora\typora-user-images\1554774821525.png" alt="1554774821525"></p>
+<p>迁移学习，多任务学习，端到端的学习</p>
+<h2 id="CNN网络："><a href="#CNN网络：" class="headerlink" title="CNN网络："></a>CNN网络：</h2><p>边缘检测算子：垂直边缘检测算子，水平边缘检测算子，soble检测算子，scharr检测算子。</p>
+<p>图片大小为n<strong>*n，卷积核为f</strong>f，那么输出图片大小为（n-f+1）**（n-f+1）</p>
+<p>填充：padding</p>
+<p>压缩信息：stride</p>
+<p>步长为s,填充长度为p,输入大小为n*n，滤波器大小为f**f,那么卷积之后图片尺寸为</p>
+<p>[(n+2p-f)/s+1]**[(n+2p-f)/s+1],向下取整。</p>
+<p><img src="//qiqiph.github.io/2019/04/08/深度学习/Users\Pan.Yanqi\AppData\Roaming\Typora\typora-user-images\1554797680573.png" alt="1554797680573"></p>
+<p><strong>高维滤波器</strong></p>
+<p>输入通道与滤波器通道钥匙一样的，其中一组滤波器为对应通道相加输出一个单通道的结果，有n组滤波器输出n组</p>
+<p><img src="//qiqiph.github.io/2019/04/08/深度学习/Users\Pan.Yanqi\AppData\Roaming\Typora\typora-user-images\1554778527112.png" alt="1554778527112"></p>
+<p>CNN标准结构：卷积、池化、</p>
+<p>使用卷积的原因：</p>
+<p><strong>参数共享？</strong>？、稀疏连接</p>
+<h2 id="卷积与全连接层"><a href="#卷积与全连接层" class="headerlink" title="卷积与全连接层"></a>卷积与全连接层</h2><h2 id="残差网络"><a href="#残差网络" class="headerlink" title="残差网络"></a>残差网络</h2><p>解决梯度消失和梯度爆炸的问题</p>
 
           
         
@@ -1587,7 +1927,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">8</span>
+                    <span class="site-state-item-count">9</span>
                     <span class="site-state-item-name">Artikel</span>
                   </a>
                 </div>

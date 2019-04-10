@@ -96,17 +96,22 @@
 
 
 
-  <meta name="description" content="问题： 1、dropout的缺点是成本函数无法被明确定义？使用dropout时，先确认成本函数单调递减，在打开dropout?? 2、relu是线性的，其能够拟合问题吗？？ 3、梯度消失与梯度爆炸：根本原因都是反向传播过程中梯度更新的问题。 比如使用sigmodi函数是，最大梯度为1/4，如果w&amp;lt;1,那么导数*w&amp;lt;1/4,根据链式求导法则，前面的层比后面的层更新慢，导致梯度消失。 梯度">
+  <meta name="description" content="问题： 1、dropout的缺点是成本函数无法被明确定义？使用dropout时，先确认成本函数单调递减，再打开dropout?? 2、relu是线性的，其能够拟合问题吗？？ 梯度消失与梯度爆炸：根本原因都是反向传播过程中梯度更新的问题。 比如使用sigmodi函数是，最大梯度为1/4，如果w&amp;lt;1,那么导数*w&amp;lt;1/4,根据链式求导法则，前面的层比后面的层更新慢，导致梯度消失。 梯度爆炸">
 <meta property="og:type" content="article">
 <meta property="og:title" content="深度学习">
 <meta property="og:url" content="https://qiqiph.github.io/2019/04/08/深度学习/index.html">
 <meta property="og:site_name" content="PanYanqi&#39;s Blog">
-<meta property="og:description" content="问题： 1、dropout的缺点是成本函数无法被明确定义？使用dropout时，先确认成本函数单调递减，在打开dropout?? 2、relu是线性的，其能够拟合问题吗？？ 3、梯度消失与梯度爆炸：根本原因都是反向传播过程中梯度更新的问题。 比如使用sigmodi函数是，最大梯度为1/4，如果w&amp;lt;1,那么导数*w&amp;lt;1/4,根据链式求导法则，前面的层比后面的层更新慢，导致梯度消失。 梯度">
+<meta property="og:description" content="问题： 1、dropout的缺点是成本函数无法被明确定义？使用dropout时，先确认成本函数单调递减，再打开dropout?? 2、relu是线性的，其能够拟合问题吗？？ 梯度消失与梯度爆炸：根本原因都是反向传播过程中梯度更新的问题。 比如使用sigmodi函数是，最大梯度为1/4，如果w&amp;lt;1,那么导数*w&amp;lt;1/4,根据链式求导法则，前面的层比后面的层更新慢，导致梯度消失。 梯度爆炸">
 <meta property="og:locale" content="Chinese">
-<meta property="og:updated_time" content="2019-04-08T07:44:05.624Z">
+<meta property="og:image" content="https://img-blog.csdn.net/20180112195606874?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMjU3MzcxNjk=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+<meta property="og:image" content="https://qiqiph.github.io/2019/04/08/深度学习/Users/Pan.Yanqi/AppData/Roaming/Typora/typora-user-images/1554774821525.png">
+<meta property="og:image" content="https://qiqiph.github.io/2019/04/08/深度学习/Users/Pan.Yanqi/AppData/Roaming/Typora/typora-user-images/1554797680573.png">
+<meta property="og:image" content="https://qiqiph.github.io/2019/04/08/深度学习/Users/Pan.Yanqi/AppData/Roaming/Typora/typora-user-images/1554778527112.png">
+<meta property="og:updated_time" content="2019-04-09T15:23:51.978Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="深度学习">
-<meta name="twitter:description" content="问题： 1、dropout的缺点是成本函数无法被明确定义？使用dropout时，先确认成本函数单调递减，在打开dropout?? 2、relu是线性的，其能够拟合问题吗？？ 3、梯度消失与梯度爆炸：根本原因都是反向传播过程中梯度更新的问题。 比如使用sigmodi函数是，最大梯度为1/4，如果w&amp;lt;1,那么导数*w&amp;lt;1/4,根据链式求导法则，前面的层比后面的层更新慢，导致梯度消失。 梯度">
+<meta name="twitter:description" content="问题： 1、dropout的缺点是成本函数无法被明确定义？使用dropout时，先确认成本函数单调递减，再打开dropout?? 2、relu是线性的，其能够拟合问题吗？？ 梯度消失与梯度爆炸：根本原因都是反向传播过程中梯度更新的问题。 比如使用sigmodi函数是，最大梯度为1/4，如果w&amp;lt;1,那么导数*w&amp;lt;1/4,根据链式求导法则，前面的层比后面的层更新慢，导致梯度消失。 梯度爆炸">
+<meta name="twitter:image" content="https://img-blog.csdn.net/20180112195606874?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMjU3MzcxNjk=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
 
 
 
@@ -332,12 +337,24 @@
                 
               
 
-              <time title="Erstellt: 2019-04-08 09:31:22 / Geändert am: 15:44:05" itemprop="dateCreated datePublished" datetime="2019-04-08T09:31:22+08:00">2019-04-08</time>
+              <time title="Erstellt: 2019-04-08 09:31:22" itemprop="dateCreated datePublished" datetime="2019-04-08T09:31:22+08:00">2019-04-08</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Bearbeitet am</span>
+                
+                <time title="Geändert am: 2019-04-09 23:23:51" itemprop="dateModified" datetime="2019-04-09T23:23:51+08:00">2019-04-09</time>
               
             
           </span>
@@ -372,16 +389,57 @@
 
       
         <p>问题：</p>
-<p>1、dropout的缺点是成本函数无法被明确定义？使用dropout时，先确认成本函数单调递减，在打开dropout??</p>
-<p>2、relu是线性的，其能够拟合问题吗？？</p>
-<p>3、梯度消失与梯度爆炸：根本原因都是反向传播过程中梯度更新的问题。</p>
+<p>1、dropout的缺点是成本函数无法被明确定义？使用dropout时，先确认成本函数单调递减，再打开dropout<strong>??</strong></p>
+<p>2、relu是线性的，其能够拟合问题吗<strong>？？</strong></p>
+<h2 id="梯度消失与梯度爆炸："><a href="#梯度消失与梯度爆炸：" class="headerlink" title="梯度消失与梯度爆炸："></a><strong>梯度消失与梯度爆炸</strong>：</h2><p>根本原因都是反向传播过程中梯度更新的问题。</p>
 <p>比如使用sigmodi函数是，最大梯度为1/4，如果w&lt;1,那么导数*w&lt;1/4,根据链式求导法则，前面的层比后面的层更新慢，导致梯度消失。</p>
 <p>梯度爆炸：w&gt;4时，梯度以指数形式增长，导致梯度爆炸</p>
-<p>出现loss=nan的原因:直观上就是loss值太大，数字越界了：原因可能有：</p>
+<p><strong>解决方法</strong>：</p>
+<p>1、初始化缓解，梯度裁剪、正则化：</p>
+<p>裁剪：设置梯度裁剪阈值，将梯度限制在某个范围之内。</p>
+<p>正则化：在损失函数中加入该值，防止出现w过大的情况</p>
+<p>2、使用relu激活函数</p>
+<p>3、<strong>BN</strong>：batch normalization批规范化，使数据具有相同的分布，</p>
+<p>4、残差结构</p>
+<p>5、LSTM</p>
+<p><strong>出现loss=nan的原因</strong>:直观上就是loss值太大，数字越界了：原因可能有：</p>
 <p>1、梯度爆炸：学习率设置等原因导致一开始的时候w就偏大</p>
 <p>2、损失函数错误</p>
 <p>3、输入错误：pooling层的步长大于核的尺寸</p>
+<p><strong>数据归一化的作用</strong></p>
 <p>分类任务的输出层要用sigmoid函数：因为其输出是0-1之间</p>
+<h2 id="激活函数"><a href="#激活函数" class="headerlink" title="激活函数"></a>激活函数</h2><p>1、relu：优点——防止梯度爆炸，消失，加速网络训练，缺点——负数部分恒为0，导致一些神经元无法激活（通过设置小学习率部分解决<strong>？？</strong>）</p>
+<h2 id="泛化："><a href="#泛化：" class="headerlink" title="泛化："></a><strong>泛化：</strong></h2><p>提高泛化能力根本上是让神经网络更好的拟合输入，那么就不能让神经网络中的某个权重特别大，使用正则化，dropout等实现</p>
+<p>正则化：</p>
+<h2 id="归一化标准化与正则化"><a href="#归一化标准化与正则化" class="headerlink" title="归一化标准化与正则化"></a>归一化标准化与正则化</h2><p>归一化：线性/非线性映射到某一区间，防止某个特征的影响覆盖其他的特征</p>
+<p><a href="https://zhuanlan.zhihu.com/p/29957294" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/29957294</a></p>
+<h3 id="BN标准化："><a href="#BN标准化：" class="headerlink" title="BN标准化："></a><strong>BN标准化：</strong></h3><p>x=(x-平均值)/方差</p>
+<p>直观理解：batchnorm降低了数据之间的绝对差异，有一个去相关的性质，更多的考虑相对差异性，因此在分类任务上具有更好的效果。</p>
+<p><img src="https://img-blog.csdn.net/20180112195606874?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMjU3MzcxNjk=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="è¿éåå¾çæè¿°"></p>
+<p><strong>设置 γ 和 β 的原因</strong>是，如果各隐藏层的输入均值在靠近 0 的区域，即处于激活函数的线性区域，不利于训练非线性神经网络，从而得到效果较差的模型。因此，需要用 γ 和 β 对标准化后的结果做进一步处理。</p>
+<h3 id="正则化：l1-l2-dropout"><a href="#正则化：l1-l2-dropout" class="headerlink" title="正则化：l1,l2,dropout"></a>正则化：l1,l2,dropout</h3><h2 id="梯度验证"><a href="#梯度验证" class="headerlink" title="梯度验证"></a>梯度验证</h2><p>检查代码是否有错</p>
+<h2 id="优化算法"><a href="#优化算法" class="headerlink" title="优化算法"></a>优化算法</h2><p>随机梯度下降（SGD,）：</p>
+<h2 id="超参数调整"><a href="#超参数调整" class="headerlink" title="超参数调整"></a>超参数调整</h2><p>最重要：学习率</p>
+<p>齐次：动量衰减函数，隐藏层神经元个数，mini-batch大小</p>
+<p>再次：Adam优化中的β1，β2，ϵ；神经网络层数，学习衰减率</p>
+<h2 id="sotfmax："><a href="#sotfmax：" class="headerlink" title="sotfmax："></a>sotfmax：</h2><p>多分类问题</p>
+<h2 id="机器学习策略："><a href="#机器学习策略：" class="headerlink" title="机器学习策略："></a><strong>机器学习策略</strong>：</h2><p>评价标准，人类误差，贝叶斯误差，精确率和召回率，调和平均数</p>
+<p><img src="//qiqiph.github.io/2019/04/08/深度学习/Users\Pan.Yanqi\AppData\Roaming\Typora\typora-user-images\1554774821525.png" alt="1554774821525"></p>
+<p>迁移学习，多任务学习，端到端的学习</p>
+<h2 id="CNN网络："><a href="#CNN网络：" class="headerlink" title="CNN网络："></a>CNN网络：</h2><p>边缘检测算子：垂直边缘检测算子，水平边缘检测算子，soble检测算子，scharr检测算子。</p>
+<p>图片大小为n<strong>*n，卷积核为f</strong>f，那么输出图片大小为（n-f+1）**（n-f+1）</p>
+<p>填充：padding</p>
+<p>压缩信息：stride</p>
+<p>步长为s,填充长度为p,输入大小为n*n，滤波器大小为f**f,那么卷积之后图片尺寸为</p>
+<p>[(n+2p-f)/s+1]**[(n+2p-f)/s+1],向下取整。</p>
+<p><img src="//qiqiph.github.io/2019/04/08/深度学习/Users\Pan.Yanqi\AppData\Roaming\Typora\typora-user-images\1554797680573.png" alt="1554797680573"></p>
+<p><strong>高维滤波器</strong></p>
+<p>输入通道与滤波器通道钥匙一样的，其中一组滤波器为对应通道相加输出一个单通道的结果，有n组滤波器输出n组</p>
+<p><img src="//qiqiph.github.io/2019/04/08/深度学习/Users\Pan.Yanqi\AppData\Roaming\Typora\typora-user-images\1554778527112.png" alt="1554778527112"></p>
+<p>CNN标准结构：卷积、池化、</p>
+<p>使用卷积的原因：</p>
+<p><strong>参数共享？</strong>？、稀疏连接</p>
+<h2 id="卷积与全连接层"><a href="#卷积与全连接层" class="headerlink" title="卷积与全连接层"></a>卷积与全连接层</h2><h2 id="残差网络"><a href="#残差网络" class="headerlink" title="残差网络"></a>残差网络</h2><p>解决梯度消失和梯度爆炸的问题</p>
 
       
     </div>
@@ -468,8 +526,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Inhaltsverzeichnis
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Übersicht
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -484,7 +551,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">8</span>
+                    <span class="site-state-item-count">9</span>
                     <span class="site-state-item-name">Artikel</span>
                   </a>
                 </div>
@@ -515,6 +582,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#梯度消失与梯度爆炸："><span class="nav-number">1.</span> <span class="nav-text">梯度消失与梯度爆炸：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#激活函数"><span class="nav-number">2.</span> <span class="nav-text">激活函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#泛化："><span class="nav-number">3.</span> <span class="nav-text">泛化：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#归一化标准化与正则化"><span class="nav-number">4.</span> <span class="nav-text">归一化标准化与正则化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#BN标准化："><span class="nav-number">4.1.</span> <span class="nav-text">BN标准化：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#正则化：l1-l2-dropout"><span class="nav-number">4.2.</span> <span class="nav-text">正则化：l1,l2,dropout</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#梯度验证"><span class="nav-number">5.</span> <span class="nav-text">梯度验证</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#优化算法"><span class="nav-number">6.</span> <span class="nav-text">优化算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#超参数调整"><span class="nav-number">7.</span> <span class="nav-text">超参数调整</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#sotfmax："><span class="nav-number">8.</span> <span class="nav-text">sotfmax：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#机器学习策略："><span class="nav-number">9.</span> <span class="nav-text">机器学习策略：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CNN网络："><span class="nav-number">10.</span> <span class="nav-text">CNN网络：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#卷积与全连接层"><span class="nav-number">11.</span> <span class="nav-text">卷积与全连接层</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#残差网络"><span class="nav-number">12.</span> <span class="nav-text">残差网络</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       

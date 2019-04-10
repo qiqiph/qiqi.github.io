@@ -96,14 +96,20 @@
 
 
 
-  <meta property="og:type" content="article">
+  <meta name="description" content="一、计算机图形学相关https://blog.csdn.net/zhaotianyu950323/article/details/79955805https://github.com/HolenYHR/Review_of_Computer_Graphics《3D数学基础：图形与游戏开发》顶点着色器，图元装配，几何着色器 1、什么是光栅化负责整个渲染过程中的几何成像环节，把几何图元（点，线，面）投影">
+<meta property="og:type" content="article">
 <meta property="og:title" content="计算机图形学">
 <meta property="og:url" content="https://qiqiph.github.io/2019/04/08/计算机图形学/index.html">
 <meta property="og:site_name" content="PanYanqi&#39;s Blog">
+<meta property="og:description" content="一、计算机图形学相关https://blog.csdn.net/zhaotianyu950323/article/details/79955805https://github.com/HolenYHR/Review_of_Computer_Graphics《3D数学基础：图形与游戏开发》顶点着色器，图元装配，几何着色器 1、什么是光栅化负责整个渲染过程中的几何成像环节，把几何图元（点，线，面）投影">
 <meta property="og:locale" content="Chinese">
-<meta property="og:updated_time" content="2019-04-08T08:18:44.469Z">
+<meta property="og:image" content="en-resource://database/1938:1">
+<meta property="og:image" content="en-resource://database/1940:1">
+<meta property="og:updated_time" content="2019-04-10T07:25:22.743Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="计算机图形学">
+<meta name="twitter:description" content="一、计算机图形学相关https://blog.csdn.net/zhaotianyu950323/article/details/79955805https://github.com/HolenYHR/Review_of_Computer_Graphics《3D数学基础：图形与游戏开发》顶点着色器，图元装配，几何着色器 1、什么是光栅化负责整个渲染过程中的几何成像环节，把几何图元（点，线，面）投影">
+<meta name="twitter:image" content="en-resource://database/1938:1">
 
 
 
@@ -333,6 +339,22 @@
             
 
             
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Bearbeitet am</span>
+                
+                <time title="Geändert am: 2019-04-10 15:25:22" itemprop="dateModified" datetime="2019-04-10T15:25:22+08:00">2019-04-10</time>
+              
+            
           </span>
 
           
@@ -364,7 +386,18 @@
       
 
       
-        
+        <h1 id="一、计算机图形学相关"><a href="#一、计算机图形学相关" class="headerlink" title="一、计算机图形学相关"></a>一、计算机图形学相关</h1><p><a href="https://blog.csdn.net/zhaotianyu950323/article/details/79955805" target="_blank" rel="noopener">https://blog.csdn.net/zhaotianyu950323/article/details/79955805</a><br><a href="https://github.com/HolenYHR/Review_of_Computer_Graphics" target="_blank" rel="noopener">https://github.com/HolenYHR/Review_of_Computer_Graphics</a><br>《3D数学基础：图形与游戏开发》<br>顶点着色器，图元装配，几何着色器</p>
+<h2 id="1、什么是光栅化"><a href="#1、什么是光栅化" class="headerlink" title="1、什么是光栅化"></a>1、什么是光栅化</h2><p>负责整个渲染过程中的几何成像环节，把几何图元（点，线，面）投影到成像平面并确定哪些像素或者采样点被图元覆盖。<br>输入：三角形三个顶点，输出：三角形会覆盖屏幕上哪些像素</p>
+<h2 id="2、什么是光线跟踪"><a href="#2、什么是光线跟踪" class="headerlink" title="2、什么是光线跟踪"></a>2、什么是光线跟踪</h2><h2 id="3、渲染过程"><a href="#3、渲染过程" class="headerlink" title="3、渲染过程"></a>3、渲染过程</h2><p>vtk渲染：data-mapper-actor-render-renderwinodow-交互<br><img src="en-resource://database/1938:1" alt="c8d641081e4ef27dbc6cbf743dfbc3ad.png"><br><img src="en-resource://database/1940:1" alt="22c331f01da35d684804173f49ed06b3.png"></p>
+<h2 id="4、游戏引擎包括什么"><a href="#4、游戏引擎包括什么" class="headerlink" title="4、游戏引擎包括什么"></a>4、游戏引擎包括什么</h2><h2 id="5、三维模型空间变换"><a href="#5、三维模型空间变换" class="headerlink" title="5、三维模型空间变换"></a>5、三维模型空间变换</h2><p>五个坐标系：世界，模型，摄像机，裁剪空间，屏幕空间。<br>模型——模型矩阵——世界坐标系——view矩阵——摄像机坐标系——投影矩阵——投影坐标系——裁剪平面——viewport——屏幕坐标系<br>空间变换矩阵：模型矩阵（物体平移，旋转缩放），观察矩阵（通过平移，旋转，缩放移动场景），投影矩阵（将观察者坐标系转换到裁剪坐标系）</p>
+<h2 id="6、怎么判断一个点在三角形里面"><a href="#6、怎么判断一个点在三角形里面" class="headerlink" title="6、怎么判断一个点在三角形里面"></a>6、怎么判断一个点在三角形里面</h2><h2 id="7、纹理滤波"><a href="#7、纹理滤波" class="headerlink" title="7、纹理滤波"></a>7、纹理滤波</h2><h2 id="8、几何着色器的作用"><a href="#8、几何着色器的作用" class="headerlink" title="8、几何着色器的作用"></a>8、几何着色器的作用</h2><p>顶点着色器：计算顶点的位置，并将顶点投影到二维屏幕上<br>几何着色器：将形状（图元）划分为更多的形状（图元）<br>片段着色器：根据顶点着色器和几何着色器输出的插值，计算每个片源的颜色，之后进行测试和混合</p>
+<h2 id="9、深度测试"><a href="#9、深度测试" class="headerlink" title="9、深度测试"></a>9、深度测试</h2><p>深度缓存算法：保存每个像素的深度</p>
+<h2 id="10、碰撞检测、碰撞盒、效率优化"><a href="#10、碰撞检测、碰撞盒、效率优化" class="headerlink" title="10、碰撞检测、碰撞盒、效率优化"></a>10、碰撞检测、碰撞盒、效率优化</h2><h2 id="11、项目中的数据结构：vtk"><a href="#11、项目中的数据结构：vtk" class="headerlink" title="11、项目中的数据结构：vtk"></a>11、项目中的数据结构：vtk</h2><h2 id="12、蒙皮的原理"><a href="#12、蒙皮的原理" class="headerlink" title="12、蒙皮的原理"></a>12、蒙皮的原理</h2><h2 id="旋转的三种方法："><a href="#旋转的三种方法：" class="headerlink" title="旋转的三种方法："></a>旋转的三种方法：</h2><p>旋转矩阵（4<em> 4），欧拉角，四元数。三种方法的优缺点：<br>旋转矩阵：4</em> 4 16个元素表示一个向量——一个角度四个值，增加计算量，造成空间浪费，但是这种方式旋转轴可以是任意的向量。<br>欧拉旋转：容易理解，用3个值（对应自身局部x,y,z的旋转角度）表示但是转换效率不如四元数。欧拉旋转存在万向节锁的现象，原因：旋转过程中造成了某些坐标轴重合，导致失去了某个方向的旋转功能（<a href="https://www.zhihu.com/question/47736315/answer/236284413）" target="_blank" rel="noopener">https://www.zhihu.com/question/47736315/answer/236284413）</a><br>四元数旋转：用四个数表示任意绕任意过原点的向量的旋转，方便快捷，在某些实现下比旋转矩阵效率更高，可以提高平滑插值</p>
+<h2 id="13、冯氏光照模型"><a href="#13、冯氏光照模型" class="headerlink" title="13、冯氏光照模型"></a>13、冯氏光照模型</h2><p>光照：环境，漫反射，镜面反射</p>
+<h1 id="二、深度学习相关"><a href="#二、深度学习相关" class="headerlink" title="二、深度学习相关"></a>二、深度学习相关</h1><p>深度预测网络/GAN网络</p>
+<h1 id="图像相关"><a href="#图像相关" class="headerlink" title="图像相关"></a>图像相关</h1><p>双线性插值，重采样方法</p>
+<h1 id="三、Qt相关"><a href="#三、Qt相关" class="headerlink" title="三、Qt相关"></a>三、Qt相关</h1><h1 id="VTK相关"><a href="#VTK相关" class="headerlink" title="VTK相关"></a>VTK相关</h1><h1 id="C-相关"><a href="#C-相关" class="headerlink" title="C++相关"></a>C++相关</h1><h1 id="四、测试流程相关"><a href="#四、测试流程相关" class="headerlink" title="四、测试流程相关"></a>四、测试流程相关</h1><p>markdown使用教程：<a href="https://list.yinxiang.com/markdown/eef42447-db3f-48ee-827b-1bb34c03eb83.php" target="_blank" rel="noopener">https://list.yinxiang.com/markdown/eef42447-db3f-48ee-827b-1bb34c03eb83.php</a></p>
+
       
     </div>
 
@@ -450,8 +483,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Inhaltsverzeichnis
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Übersicht
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -466,7 +508,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">8</span>
+                    <span class="site-state-item-count">9</span>
                     <span class="site-state-item-name">Artikel</span>
                   </a>
                 </div>
@@ -497,6 +539,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一、计算机图形学相关"><span class="nav-number">1.</span> <span class="nav-text">一、计算机图形学相关</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1、什么是光栅化"><span class="nav-number">1.1.</span> <span class="nav-text">1、什么是光栅化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、什么是光线跟踪"><span class="nav-number">1.2.</span> <span class="nav-text">2、什么是光线跟踪</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3、渲染过程"><span class="nav-number">1.3.</span> <span class="nav-text">3、渲染过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4、游戏引擎包括什么"><span class="nav-number">1.4.</span> <span class="nav-text">4、游戏引擎包括什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5、三维模型空间变换"><span class="nav-number">1.5.</span> <span class="nav-text">5、三维模型空间变换</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6、怎么判断一个点在三角形里面"><span class="nav-number">1.6.</span> <span class="nav-text">6、怎么判断一个点在三角形里面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7、纹理滤波"><span class="nav-number">1.7.</span> <span class="nav-text">7、纹理滤波</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8、几何着色器的作用"><span class="nav-number">1.8.</span> <span class="nav-text">8、几何着色器的作用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9、深度测试"><span class="nav-number">1.9.</span> <span class="nav-text">9、深度测试</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10、碰撞检测、碰撞盒、效率优化"><span class="nav-number">1.10.</span> <span class="nav-text">10、碰撞检测、碰撞盒、效率优化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#11、项目中的数据结构：vtk"><span class="nav-number">1.11.</span> <span class="nav-text">11、项目中的数据结构：vtk</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#12、蒙皮的原理"><span class="nav-number">1.12.</span> <span class="nav-text">12、蒙皮的原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#旋转的三种方法："><span class="nav-number">1.13.</span> <span class="nav-text">旋转的三种方法：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#13、冯氏光照模型"><span class="nav-number">1.14.</span> <span class="nav-text">13、冯氏光照模型</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二、深度学习相关"><span class="nav-number">2.</span> <span class="nav-text">二、深度学习相关</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#图像相关"><span class="nav-number">3.</span> <span class="nav-text">图像相关</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#三、Qt相关"><span class="nav-number">4.</span> <span class="nav-text">三、Qt相关</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#VTK相关"><span class="nav-number">5.</span> <span class="nav-text">VTK相关</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#C-相关"><span class="nav-number">6.</span> <span class="nav-text">C++相关</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#四、测试流程相关"><span class="nav-number">7.</span> <span class="nav-text">四、测试流程相关</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       

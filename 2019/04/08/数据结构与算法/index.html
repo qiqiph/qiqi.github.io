@@ -104,9 +104,11 @@
 <meta property="og:description" content="数据结构二叉树二叉树的遍历：前中后序，层次（广度优先）https://blog.csdn.net/u013468917/article/details/69556547 前中后序：递归遍历简单：比如前序——输出根节点值，递归输出左节点，递归输出右节点即可。 非递归实现： 前序： p=root while(p||stack非空) ​     if(p): ​         输出p.val；栈放入p">
 <meta property="og:locale" content="Chinese">
 <meta property="og:image" content="https://qiqiph.github.io/2019/04/08/数据结构与算法/myBlog/blog/source/_posts/数据结构与算法/1554444517470.png">
+<meta property="og:image" content="https://qiqiph.github.io/2019/04/08/数据结构与算法/Users/Pan.Yanqi/AppData/Roaming/Typora/typora-user-images/1554726366930.png">
+<meta property="og:image" content="https://qiqiph.github.io/2019/04/08/数据结构与算法/Users/Pan.Yanqi/AppData/Roaming/Typora/typora-user-images/1554726444639.png">
 <meta property="og:image" content="https://qiqiph.github.io/2019/04/08/数据结构与算法/Users/Pan.Yanqi/AppData/Roaming/Typora/typora-user-images/1554442724770.png">
 <meta property="og:image" content="https://qiqiph.github.io/2019/04/08/数据结构与算法/Users/Pan.Yanqi/AppData/Roaming/Typora/typora-user-images/1554443248625.png">
-<meta property="og:updated_time" content="2019-04-08T08:19:45.598Z">
+<meta property="og:updated_time" content="2019-04-09T16:00:20.050Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数据结构与算法">
 <meta name="twitter:description" content="数据结构二叉树二叉树的遍历：前中后序，层次（广度优先）https://blog.csdn.net/u013468917/article/details/69556547 前中后序：递归遍历简单：比如前序——输出根节点值，递归输出左节点，递归输出右节点即可。 非递归实现： 前序： p=root while(p||stack非空) ​     if(p): ​         输出p.val；栈放入p">
@@ -336,12 +338,24 @@
                 
               
 
-              <time title="Erstellt: 2019-04-08 16:18:07 / Geändert am: 16:19:45" itemprop="dateCreated datePublished" datetime="2019-04-08T16:18:07+08:00">2019-04-08</time>
+              <time title="Erstellt: 2019-04-08 16:18:07" itemprop="dateCreated datePublished" datetime="2019-04-08T16:18:07+08:00">2019-04-08</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Bearbeitet am</span>
+                
+                <time title="Geändert am: 2019-04-10 00:00:20" itemprop="dateModified" datetime="2019-04-10T00:00:20+08:00">2019-04-10</time>
               
             
           </span>
@@ -426,13 +440,27 @@
 <p>计数排序：</p>
 <p>桶排序：</p>
 <p>排序算法比较:</p>
-<h2 id="二分："><a href="#二分：" class="headerlink" title="二分："></a>二分：</h2><p>复杂度为O(logn)</p>
+<p><strong>题目：</strong></p>
+<p><strong>1、归并排序</strong>——数组中的逆序对:该题的难点在于求数字过大时出现的越界问题</p>
+<p>归并排序伪代码：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">sort(<span class="built_in">array</span>):</span><br><span class="line">   sort(<span class="built_in">array</span>,<span class="number">0</span>,n<span class="number">-1</span>);</span><br><span class="line">sort(<span class="built_in">array</span>,p,r)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span>(p&gt;=r)<span class="keyword">return</span>;</span><br><span class="line">    q=(p+r)/<span class="number">2</span></span><br><span class="line">    sort(<span class="built_in">array</span>,p,q);</span><br><span class="line">    sort(<span class="built_in">array</span>,q,r);</span><br><span class="line">    merge(<span class="built_in">array</span>,p,q,r);</span><br><span class="line">&#125;</span><br><span class="line">merge(<span class="built_in">array</span>,p,q,r)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">//临时数组,双游标</span></span><br><span class="line">    temp;</span><br><span class="line">    i=p；j=q+<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">int</span> n=p;</span><br><span class="line">    <span class="keyword">while</span>(p&lt;=q&amp;&amp;j&lt;=r)</span><br><span class="line">    &#123;</span><br><span class="line">        temp[n]=<span class="built_in">array</span>[i]&gt;<span class="built_in">array</span>[j]?<span class="built_in">array</span>[j]:<span class="built_in">array</span>[i]</span><br><span class="line">        i++或者j++</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//把temp的值替换到array相应的位置</span></span><br><span class="line">     ......</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="二分："><a href="#二分：" class="headerlink" title="二分："></a>二分：</h2><p><strong>复杂度为O(logn)</strong></p>
 <p>初级二分：对于有序数组，两个游标low和high，分为middle=(low+high)/2,比较需要查找的value与middle的大小关系，然后更新low和high，如果low&gt;high,退出查找。</p>
-<p>二分算法需要注意的地方：</p>
+<p><strong>二分算法需要注意的地方：</strong></p>
 <p>（1)循环退出条件</p>
 <p>（2）mid的取值，如果mid=(low+high)/2,会导致low+high溢出，所以使用mid=low+(high-low)/2更新</p>
 <p>（3）low和high的更新，low=mid+1，high=mid-1;</p>
 <p>应用场景：顺序表结构，针对有序数据，数据量不能太小也不能太大。</p>
+<p>复杂二分：</p>
+<p>求第一个出现，最后一个出现的位置判断条件：</p>
+<p><strong>第一个出现k的位置</strong>：二分等于k时向前搜索，判断条件如下：</p>
+<p><img src="//qiqiph.github.io/2019/04/08/数据结构与算法/Users\Pan.Yanqi\AppData\Roaming\Typora\typora-user-images\1554726366930.png" alt="1554726366930"></p>
+<p><strong>最后一个出现k的位置</strong>：二分等于k时，向后搜索判断，条件如下：</p>
+<p><img src="//qiqiph.github.io/2019/04/08/数据结构与算法/Users\Pan.Yanqi\AppData\Roaming\Typora\typora-user-images\1554726444639.png" alt="1554726444639"></p>
+<p><strong>例题</strong></p>
+<p>1、有序数组中，出现k的次数：</p>
+<p>（1）找到第一个出现K的位置和最后一个出现K的位置，两者序号相加。</p>
+<p>（2）取巧的方法，当数组为整数，判断k+0.5和k-0.5应该插入的位置，两者相减</p>
 <h2 id="字符串匹配"><a href="#字符串匹配" class="headerlink" title="字符串匹配"></a>字符串匹配</h2><p>主串和模式串进行匹配：</p>
 <p>（1）最简单的方式暴力匹配<strong>BF</strong>，时间复杂度是O（n*m）</p>
 <p>（2<strong>）BK</strong>（Rabin-Karp）时间复杂度是O（n）：我们通过哈希算法对主串中的 n-m+1 个子串分别求哈希值，然后与模式串的hash值进行对比。如果没有好的hash处理技巧，那么时间复杂度还是没有降低（求子串hash时也需要遍历）。重点：如何建立一个hash映射——假设字符串只是由字母组成，那么以26进制去见一个hash函数，比如：abc子串hash值为1<em> 26 </em>26+2<em>26+3，注意对比可以知道前一个子串hash值与下一个有关系，可以减少运算，并且还可以将26的n次方存入表，避免重复计算。其他问题：hash值越界问题，使用简单的hash导致冲突，极端境况下复杂度退化为O（n</em>m）。</p>
@@ -463,6 +491,14 @@
 <p>1、找到递推关系</p>
 <p>2、找到出口信息</p>
 <p>3、将递归转为循环：找到合适的数组保存中间overlap的内容，在数组中要表示初始化的出口</p>
+<p><strong>题目：</strong></p>
+<p>1、连续子数组的最大和，状态方程如下：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//状态转换方程</span></span><br><span class="line">    <span class="comment">//f[i]=max(f[i-1]+A[i],A[i]);</span></span><br><span class="line">    <span class="comment">//maxsum=max[f(i)]</span></span><br></pre></td></tr></table></figure>
+<p>2、把数组排成最小的数：</p>
+<p><strong>//需要先将数组进行排序</strong></p>
+<p>//动态规划状态方程：</p>
+<p>//f(i)=f(i-1)与A[i]拼接，拼接时比较字符串判断是放在字符前面还是后面</p>
+<p>//f(i)=A[i]</p>
 <h1 id="常见面试笔试题目"><a href="#常见面试笔试题目" class="headerlink" title="常见面试笔试题目"></a>常见面试笔试题目</h1><p>1、求平方根：</p>
 <p>(1)暴力求解，二分，牛顿迭代法（注意数值越界问题）：</p>
 <p>牛顿迭代公式如下，如果有函数f（x）=0，那么有如下递推公式：</p>
@@ -475,6 +511,8 @@
 <p>图：广度优先，深度优先查找，生成树和最小生成树，最短路径，拓扑排序等</p>
 <p>查找：线性表查找，树表查找，哈希表查找</p>
 <p>排序:八大排序算法，高频：归并，堆排，快排</p>
+<h3 id="单链表环的入口以及有环无环："><a href="#单链表环的入口以及有环无环：" class="headerlink" title="单链表环的入口以及有环无环："></a>单链表环的入口以及有环无环：</h3><p>双指针：fast移动2步，low移动1步判断相遇；得到相遇点encounter。</p>
+<p>判断环的入口：假设相遇点距离入口距离y，入口到起始距离为x，环长度为r，那么有x=nr-y,r表示相遇前fast的行走圈数，让两个指针移动，步长均为1，一个从相遇点开始移动，一个从起始移动，当两个相等时即为环的入口。</p>
 
       
     </div>
@@ -586,7 +624,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">8</span>
+                    <span class="site-state-item-count">9</span>
                     <span class="site-state-item-name">Artikel</span>
                   </a>
                 </div>
@@ -628,7 +666,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#数据结构"><span class="nav-number">1.</span> <span class="nav-text">数据结构</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#二叉树"><span class="nav-number">1.1.</span> <span class="nav-text">二叉树</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#二叉树的遍历："><span class="nav-number">1.1.1.</span> <span class="nav-text">二叉树的遍历：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#算法"><span class="nav-number">2.</span> <span class="nav-text">算法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#排序算法"><span class="nav-number">2.1.</span> <span class="nav-text">排序算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二分："><span class="nav-number">2.2.</span> <span class="nav-text">二分：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字符串匹配"><span class="nav-number">2.3.</span> <span class="nav-text">字符串匹配</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#深度优先和广度优先"><span class="nav-number">2.4.</span> <span class="nav-text">深度优先和广度优先</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#递归"><span class="nav-number">2.5.</span> <span class="nav-text">递归</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#回溯"><span class="nav-number">2.6.</span> <span class="nav-text">回溯</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分治"><span class="nav-number">2.7.</span> <span class="nav-text">分治</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#贪心"><span class="nav-number">2.8.</span> <span class="nav-text">贪心</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#动态规划"><span class="nav-number">2.9.</span> <span class="nav-text">动态规划</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#常见面试笔试题目"><span class="nav-number">3.</span> <span class="nav-text">常见面试笔试题目</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#数据结构"><span class="nav-number">1.</span> <span class="nav-text">数据结构</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#二叉树"><span class="nav-number">1.1.</span> <span class="nav-text">二叉树</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#二叉树的遍历："><span class="nav-number">1.1.1.</span> <span class="nav-text">二叉树的遍历：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#算法"><span class="nav-number">2.</span> <span class="nav-text">算法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#排序算法"><span class="nav-number">2.1.</span> <span class="nav-text">排序算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二分："><span class="nav-number">2.2.</span> <span class="nav-text">二分：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字符串匹配"><span class="nav-number">2.3.</span> <span class="nav-text">字符串匹配</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#深度优先和广度优先"><span class="nav-number">2.4.</span> <span class="nav-text">深度优先和广度优先</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#递归"><span class="nav-number">2.5.</span> <span class="nav-text">递归</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#回溯"><span class="nav-number">2.6.</span> <span class="nav-text">回溯</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分治"><span class="nav-number">2.7.</span> <span class="nav-text">分治</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#贪心"><span class="nav-number">2.8.</span> <span class="nav-text">贪心</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#动态规划"><span class="nav-number">2.9.</span> <span class="nav-text">动态规划</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#常见面试笔试题目"><span class="nav-number">3.</span> <span class="nav-text">常见面试笔试题目</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#单链表环的入口以及有环无环："><span class="nav-number">3.0.1.</span> <span class="nav-text">单链表环的入口以及有环无环：</span></a></li></ol></li></ol></div>
             
 
           </div>
